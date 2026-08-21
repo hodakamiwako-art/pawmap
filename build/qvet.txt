@@ -1,0 +1,9 @@
+[out:json][timeout:300];
+(
+  node["amenity"="veterinary"](37.42,126.76,37.70,127.19);
+  way["amenity"="veterinary"](37.42,126.76,37.70,127.19);
+  node["shop"="pet"](37.42,126.76,37.70,127.19);
+  way["shop"="pet"](37.42,126.76,37.70,127.19);
+  node["shop"="pet_grooming"](37.42,126.76,37.70,127.19);
+);
+out center tags;

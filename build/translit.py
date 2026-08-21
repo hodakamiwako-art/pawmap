@@ -106,6 +106,7 @@ def _syl_kana(cho_r, jung_r, jong_r, head):
 def _syllables(text):
     """文字列を (初声, 中声, 終声) または生文字の並びにし、連音を解決する"""
     syls = [decompose(ch) or ch for ch in text]
+    # 連音（받침 + ㅇ）
     for i in range(len(syls) - 1):
         a, b = syls[i], syls[i + 1]
         if isinstance(a, tuple) and isinstance(b, tuple) and a[2] and b[0] == 11:
@@ -114,17 +115,45 @@ def _syllables(text):
                 syls[i + 1] = (JONG2CHO[a[2]], b[1], b[2])
             elif a[2] == 27:                      # ㅎ は消える
                 syls[i] = (a[0], a[1], 0)
+    # 子音同化。地名に効くものだけ入れる
+    #   강릉 → 강능 Gangneung / 신라 → 실라 Silla / 설날 → 설랄 Seollal
+    for i in range(len(syls) - 1):
+        a, b = syls[i], syls[i + 1]
+        if not (isinstance(a, tuple) and isinstance(b, tuple)):
+            continue
+        jong, cho = a[2], b[0]
+        if cho == 5:                              # 次が ㄹ
+            if jong in (16, 21, 1, 17, 24, 26):   # ㅁㅇ / ㄱㅂ系 のあとは ㄴ に変わる
+                syls[i + 1] = (2, b[1], b[2])
+            elif jong == 4:                       # ㄴ + ㄹ → ㄹㄹ
+                syls[i] = (a[0], a[1], 8)
+        elif cho == 2 and jong == 8:              # ㄹ + ㄴ → ㄹㄹ
+            syls[i + 1] = (5, b[1], b[2])
+    # 閉鎖音の鼻音化。왕십리 → 왕심니 Wangsimni
+    NASALISE = {**{k: 21 for k in (1, 2, 3, 9, 24)},
+                **{k: 4 for k in (7, 19, 20, 22, 23, 25, 27)},
+                **{k: 16 for k in (17, 18, 26)}}
+    for i in range(len(syls) - 1):
+        a, b = syls[i], syls[i + 1]
+        if not (isinstance(a, tuple) and isinstance(b, tuple)):
+            continue
+        if b[0] in (2, 6) and a[2] in NASALISE:
+            syls[i] = (a[0], a[1], NASALISE[a[2]])
     return syls
 
 
 def romanize(text):
-    out = []
+    out, prev_jong = [], ''
     for s in _syllables(text):
         if not isinstance(s, tuple):
             out.append(s)
+            prev_jong = ''
             continue
         i, j, k = s
-        out.append(CHO_R[i] + JUNG_R[j] + JONG_R[k])
+        # ㄹ が ㄹ のあとに来たら l（신라 → silla）
+        cho = 'l' if (i == 5 and prev_jong == 'l') else CHO_R[i]
+        out.append(cho + JUNG_R[j] + JONG_R[k])
+        prev_jong = JONG_R[k]
     return ''.join(out)
 
 

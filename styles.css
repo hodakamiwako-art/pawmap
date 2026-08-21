@@ -20,6 +20,12 @@
   --ig:#9B3D6E;
   --ig-wash:#F4E4EE;
   --ig-soft:#DDB4CC;
+  --vet:#1F6F8B;
+  --vet-wash:#DEEBF0;
+  --vet-soft:#A6C8D6;
+  --shop:#6B5AA6;
+  --shop-wash:#E7E3F2;
+  --shop-soft:#BDB2DC;
   --shadow:0 1px 2px rgba(22,31,26,.06),0 8px 24px rgba(22,31,26,.07);
   --shadow-lg:0 2px 6px rgba(22,31,26,.10),0 24px 60px rgba(22,31,26,.18);
   --f-disp:"Zen Old Mincho","Hiragino Mincho ProN",serif;
@@ -35,6 +41,10 @@
     --jade-wash:#172A22; --ochre:#D79A5C; --ochre-soft:#5C4527; --ochre-wash:#2A2018; --star:#D9B455;
     --mine:#F28B80; --mine-wash:#2E1A17; --mine-soft:#6E3A34;
     --ig:#E495C0; --ig-wash:#2A1A24; --ig-soft:#5C2F47;
+  --vet:#6FBBD6; --vet-wash:#132630; --vet-soft:#2C5566;
+  --shop:#A99BE0; --shop-wash:#1E1A2E; --shop-soft:#453C6B;
+    --vet:#6FBBD6; --vet-wash:#132630; --vet-soft:#2C5566;
+    --shop:#A99BE0; --shop-wash:#1E1A2E; --shop-soft:#453C6B;
     --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
     --shadow-lg:0 2px 6px rgba(0,0,0,.5),0 24px 60px rgba(0,0,0,.6);
     color-scheme:dark;
@@ -46,6 +56,8 @@
   --jade-wash:#172A22; --ochre:#D79A5C; --ochre-soft:#5C4527; --ochre-wash:#2A2018; --star:#D9B455;
   --mine:#F28B80; --mine-wash:#2E1A17; --mine-soft:#6E3A34;
   --ig:#E495C0; --ig-wash:#2A1A24; --ig-soft:#5C2F47;
+  --vet:#6FBBD6; --vet-wash:#132630; --vet-soft:#2C5566;
+  --shop:#A99BE0; --shop-wash:#1E1A2E; --shop-soft:#453C6B;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
   --shadow-lg:0 2px 6px rgba(0,0,0,.5),0 24px 60px rgba(0,0,0,.6);
   color-scheme:dark;
@@ -401,3 +413,33 @@ html:not([data-theme="light"]) .modal .warn{color:var(--ochre)}
 .modal .lead.err{color:#B3261E;margin:-8px 0 12px}
 :root[data-theme="dark"] .modal .lead.err,
 html:not([data-theme="light"]) .modal .lead.err{color:#F2B8B5}
+
+
+/* ---------- 動物病院・ペットショップ ---------- */
+.chk.v input{accent-color:var(--vet)}
+.chk.p input{accent-color:var(--shop)}
+.mk.vet{background:var(--vet);border-radius:2px}
+.mk.shop{background:var(--shop);border-radius:50%}
+.mkw.pet .mk{width:12px;height:12px;border-width:2px}
+/* 動物病院は十字を重ねて、色に頼らず種別が分かるようにする */
+.mkw.vet .mk::after{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:6px;height:1.6px;background:#fff;box-shadow:0 0 0 0 transparent}
+.mkw.vet .mk::before{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:1.6px;height:6px;background:#fff}
+.mkw.pet .mk{position:relative}
+.mkw.h24 .mk{box-shadow:0 0 0 2.5px var(--vet),0 1px 3px rgba(0,0,0,.4)}
+.card.pet .bullet.v{background:var(--vet);border-radius:2px}
+.card.pet .bullet.p{background:var(--shop)}
+.tag.v{background:var(--vet-wash);color:var(--vet);font-weight:500}
+.tag.p{background:var(--shop-wash);color:var(--shop);font-weight:500}
+.tag.h24{background:var(--vet);color:#fff;font-weight:700}
+.legend .k.v{background:var(--vet);border-radius:2px}
+.legend .k.p{background:var(--shop)}
+.badge.vet{background:var(--vet-wash);border-color:var(--vet-soft);color:var(--vet)}
+.badge.shop{background:var(--shop-wash);border-color:var(--shop-soft);color:var(--shop)}
+.badge.h24{background:var(--vet);border-color:var(--vet);color:#fff}
+.selrow select:disabled{opacity:.5;cursor:not-allowed}
+
+.more{display:block;width:calc(100% - 12px);margin:8px 6px 14px;padding:11px;border-radius:10px;
+  border:1px dashed var(--line);background:none;color:var(--jade);font-size:13px;cursor:pointer}
+.more:hover{background:var(--surface-2);border-style:solid}

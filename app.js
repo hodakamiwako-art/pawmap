@@ -11,12 +11,15 @@ const ICON_SUN = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" st
 let lang = detectLang();
 let t = I18N[lang];
 
-const st = { q:'', kind:'', genre:'', area:'', ter:false, favonly:false, mineonly:false,
-             subway:false, sort:'area', sel:null, selKind:null, here:null, placing:false };
+const st = { q:'', kind:'', genre:'', sido:'', sigungu:'', ter:false, favonly:false, mineonly:false,
+             subway:false, vet:false, shop:false, sort:'area', sel:null, selKind:null,
+             here:null, placing:false, limit:200 };
 
-let PLACES = [], SUB = null;
-let map, tiles, markers = new Map(), poiMarkers = new Map(), subLayer, stationLayer;
+let PLACES = [], SUB = null, PETS = null;
+let map, tiles, markers = new Map(), poiMarkers = new Map(), petMarkers = new Map(), subLayer, stationLayer;
 let hereMarker, hereRing, fitted = false, ghost = null;
+// 全国だとマーカーが5千個近くになる。DOMに載せるのは画面内だけにする
+let visIds = new Set(), visPetIds = new Set(), visPoiIds = new Set();
 
 /* ---------- 地図の下地（テーマに追従） ---------- */
 const TILE = {
@@ -33,6 +36,11 @@ function setBasemap() {
   tiles = L.tileLayer(url, { attribution: ATTR, subdomains: 'abcd', maxZoom: 20, minZoom: 10 }).addTo(map);
 }
 darkQ.addEventListener('change', setBasemap);
+
+/* ---------- 外部地図へのリンク（データに持たせず、その場で組み立てる） ---------- */
+const gmapUrl  = p => `https://www.google.com/maps/search/?api=1&query=${p.lat}%2C${p.lng}`;
+const naverUrl = p => `https://map.naver.com/p/search/${encodeURIComponent((p.ko || '') + ' ' + (p.addr || ''))}`;
+const dcUrl    = p => (p.rid ? `https://www.diningcode.com/profile.php?rid=${encodeURIComponent(p.rid)}` : '');
 
 /* ---------- 距離 ---------- */
 function distance(a, b, c, d) {
@@ -70,6 +78,7 @@ async function init() {
 
   map.on('click', e => { if (st.placing) placeAt(e.latlng); });
   map.on('zoomend', updateStationVisibility);
+  map.on('moveend', updateMarkersInView);
 
   applyLang();
   render();
@@ -87,24 +96,28 @@ async function init() {
 }
 
 function wire() {
-  $('q').oninput      = e => { st.q = e.target.value.trim(); render(); };
-  $('genre').onchange = e => { st.genre = e.target.value; render(); };
-  $('area').onchange  = e => { st.area = e.target.value; render(); };
+  $('q').oninput      = e => { st.q = e.target.value.trim(); st.limit = PAGE; render(); };
+  $('genre').onchange = e => { st.genre = e.target.value; st.limit = PAGE; render(); };
+  $('sido').onchange = e => { st.sido = e.target.value; st.sigungu = ''; buildSigungu(); st.limit = PAGE; render(); };
+  $('sigungu').onchange = e => { st.sigungu = e.target.value; st.limit = PAGE; render(); };
   $('sort').onchange  = e => { st.sort = e.target.value; if (st.sort === 'dist' && !st.here) locate(); render(); };
-  $('ter').onchange   = e => { st.ter = e.target.checked; render(); };
-  $('favonly').onchange  = e => { st.favonly = e.target.checked; render(); };
-  $('mineonly').onchange = e => { st.mineonly = e.target.checked; render(); };
+  $('ter').onchange   = e => { st.ter = e.target.checked; st.limit = PAGE; render(); };
+  $('favonly').onchange  = e => { st.favonly = e.target.checked; st.limit = PAGE; render(); };
+  $('mineonly').onchange = e => { st.mineonly = e.target.checked; st.limit = PAGE; render(); };
   $('subway').onchange   = e => { st.subway = e.target.checked; toggleSubway(); };
+  $('vet').onchange      = e => { st.vet = e.target.checked; ensurePets(); };
+  $('shop').onchange     = e => { st.shop = e.target.checked; ensurePets(); };
 
   document.querySelectorAll('.seg button').forEach(b => b.onclick = () => {
-    st.kind = b.dataset.kind;
+    st.kind = b.dataset.kind; st.limit = PAGE;
     document.querySelectorAll('.seg button').forEach(o => o.setAttribute('aria-pressed', String(o === b)));
     render();
   });
   $('reset').onclick = () => {
-    Object.assign(st, { q:'', kind:'', genre:'', area:'', ter:false, favonly:false, mineonly:false, sort:'area' });
-    $('q').value = ''; $('genre').value = ''; $('area').value = '';
+    Object.assign(st, { q:'', kind:'', genre:'', sido:'', sigungu:'', ter:false, favonly:false, mineonly:false, sort:'area' });
+    $('q').value = ''; $('genre').value = ''; $('sido').value = ''; buildSigungu();
     $('sort').value = 'area'; $('ter').checked = $('favonly').checked = $('mineonly').checked = false;
+    st.limit = PAGE;
     document.querySelectorAll('.seg button').forEach((o, i) => o.setAttribute('aria-pressed', String(i === 0)));
     render();
   };
@@ -166,11 +179,15 @@ function applyLang() {
   document.querySelector('.chk.f span').textContent = t.fav_only;
   document.querySelector('.chk.m span').textContent = t.show_mine;
   document.querySelector('.chk.s span').textContent = t.show_subway;
+  document.querySelector('.chk.v span').textContent = t.show_vet;
+  document.querySelector('.chk.p span').textContent = t.show_shop;
   $('t-legend').textContent = t.legend;
   $('t-lcafe').textContent = t.legend_cafe;
   $('t-lmeal').textContent = t.legend_meal;
   $('t-lter').textContent = t.legend_terrace;
   $('t-lmine').textContent = t.legend_mine;
+  $('t-lvet').textContent = t.legend_vet;
+  $('t-lshop').textContent = t.legend_shop;
   $('locate').title = t.locate;
   $('fitall').title = t.fitall;
   $('addpin').title = t.addpin;
@@ -180,19 +197,37 @@ function applyLang() {
 }
 
 function buildFilters() {
-  const g = $('genre'), a = $('area'), s = $('sort');
-  g.innerHTML = ''; a.innerHTML = ''; s.innerHTML = '';
+  const g = $('genre'), s = $('sort');
+  g.innerHTML = ''; s.innerHTML = '';
   g.append(new Option(t.genre_all, ''));
   const genres = [...new Map(PLACES.map(p => [p.genre.ja, p.genre])).values()]
     .sort((x, y) => x[lang].localeCompare(y[lang], lang));
   for (const x of genres) g.append(new Option(x[lang], x.ja));
-  a.append(new Option(t.area_all, ''));
-  const gus = [...new Map(PLACES.map(p => [p.gu.ja, p.gu])).values()]
-    .sort((x, y) => x[lang].localeCompare(y[lang], lang));
-  for (const x of gus) a.append(new Option(x[lang], x.ja));
   for (const [v, k] of [['area','sort_area'],['dist','sort_dist'],['rating','sort_rating'],['name','sort_name']])
     s.append(new Option(t[k], v));
-  g.value = st.genre; a.value = st.area; s.value = st.sort;
+  g.value = st.genre; s.value = st.sort;
+
+  const sd = $('sido');
+  sd.innerHTML = '';
+  sd.append(new Option(t.sido_all, ''));
+  const sidos = [...new Map(PLACES.map(p => [p.sido.ko, p.sido])).values()]
+    .sort((x, y) => x[lang].localeCompare(y[lang], lang));
+  for (const x of sidos) sd.append(new Option(x[lang], x.ko));
+  sd.value = st.sido;
+  buildSigungu();
+}
+
+/* 市郡区は選ばれた広域自治体の中だけを出す */
+function buildSigungu() {
+  const el = $('sigungu');
+  el.innerHTML = '';
+  el.append(new Option(t.sigungu_all, ''));
+  const pool = PLACES.filter(p => !st.sido || p.sido.ko === st.sido);
+  const list = [...new Map(pool.map(p => [p.sigungu.ko, p.sigungu])).values()]
+    .sort((x, y) => x[lang].localeCompare(y[lang], lang));
+  for (const x of list) el.append(new Option(x[lang], x.ko));
+  el.disabled = list.length <= 1;
+  el.value = st.sigungu;
 }
 
 /* ---------- 重なり回避 ---------- */
@@ -257,13 +292,15 @@ function match(p) {
   if (st.mineonly) return false;
   if (st.kind && p.kind !== st.kind) return false;
   if (st.genre && p.genre.ja !== st.genre) return false;
-  if (st.area && p.gu.ja !== st.area) return false;
+  if (st.sido && p.sido.ko !== st.sido) return false;
+  if (st.sigungu && p.sigungu.ko !== st.sigungu) return false;
   if (st.ter && !p.terrace) return false;
   if (st.favonly && !Store.isFav(p.id)) return false;
   if (st.q) {
     const stn = p.station ? p.station.ja + p.station.en + p.station.ko : '';
     const h = (p.ko + p.ja + p.en + p.genre.ja + p.genre.en + p.detail.ja + p.detail.en +
-               p.area.ja + p.area.en + p.area.ko + p.gu.ja + p.gu.en + p.cat_ko + p.addr + stn).toLowerCase();
+               p.area.ja + p.area.en + p.area.ko + p.sigungu.ja + p.sigungu.en + p.sigungu.ko +
+               p.sido.ja + p.sido.en + p.cat_ko + p.addr + stn).toLowerCase();
     if (!h.includes(st.q.toLowerCase())) return false;
   }
   return true;
@@ -273,6 +310,8 @@ function matchPoi(p) {
   if (!st.q) return true;
   return ((p.name || '') + (p.note || '')).toLowerCase().includes(st.q.toLowerCase());
 }
+
+const PAGE = 200;
 
 function render() {
   let vis = PLACES.filter(match);
@@ -288,10 +327,17 @@ function render() {
     vis.sort((a, b) => (a[lang] || a.ko).localeCompare(b[lang] || b.ko, lang));
   }
 
-  const total = vis.length + mine.length;
+  const pets = (PETS || []).filter(petMatch);
+  if (st.sort === 'dist' && st.here) {
+    const dd = p => distance(st.here[0], st.here[1], p.lat, p.lng);
+    pets.sort((a, b) => dd(a) - dd(b));
+  } else if (st.sort === 'name') {
+    pets.sort((a, b) => (a[lang] || a.ko).localeCompare(b[lang] || b.ko, lang));
+  }
+  const total = vis.length + mine.length + pets.length;
   $('n').textContent = total;
   $('nmap').textContent = total;
-  const active = [st.q, st.kind, st.genre, st.area].filter(Boolean).length +
+  const active = [st.q, st.kind, st.genre, st.sido, st.sigungu].filter(Boolean).length +
                  (st.ter ? 1 : 0) + (st.favonly ? 1 : 0) + (st.mineonly ? 1 : 0);
   const badge = $('fcount');
   badge.textContent = active;
@@ -305,21 +351,43 @@ function render() {
     li.textContent = st.favonly ? t.empty_fav : t.empty;
     list.appendChild(li);
   }
-  for (const p of mine) list.appendChild(poiCard(p));
-  for (const p of vis)  list.appendChild(placeCard(p));
+  // 全国だと数千件になる。入力の反応を保つため、出すのは先頭から少しずつ
+  const rows = [];
+  for (const p of mine) rows.push(() => poiCard(p));
+  for (const p of pets) rows.push(() => petCard(p));
+  for (const p of vis)  rows.push(() => placeCard(p));
+  const shown = Math.min(st.limit, rows.length);
+  for (let i = 0; i < shown; i++) list.appendChild(rows[i]());
+  if (rows.length > shown) {
+    const li = document.createElement('li');
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'more';
+    b.textContent = t.show_more(rows.length - shown);
+    b.onclick = () => { st.limit += PAGE; render(); };
+    li.appendChild(b);
+    list.appendChild(li);
+  }
 
-  const ids = new Set(vis.map(p => p.id));
-  for (const [id, m] of markers) {
-    const on = ids.has(id);
+  visIds = new Set(vis.map(p => p.id));
+  visPoiIds = new Set(mine.map(p => p.id));
+  visPetIds = new Set(pets.map(p => p.id));
+  syncPetMarkers();
+  updateMarkersInView();
+}
+
+/* 画面内（少し余裕をとる）にあるものだけを地図に載せる */
+function updateMarkersInView() {
+  if (!map) return;
+  const b = map.getBounds().pad(0.25);
+  const put = (id, m, wanted) => {
+    const on = wanted && b.contains(m.getLatLng());
     if (on && !map.hasLayer(m)) m.addTo(map);
-    if (!on && map.hasLayer(m)) map.removeLayer(m);
-  }
-  const mids = new Set(mine.map(p => p.id));
-  for (const [id, m] of poiMarkers) {
-    const on = mids.has(id);
-    if (on && !map.hasLayer(m)) m.addTo(map);
-    if (!on && map.hasLayer(m)) map.removeLayer(m);
-  }
+    else if (!on && map.hasLayer(m)) map.removeLayer(m);
+  };
+  for (const [id, m] of markers)    put(id, m, visIds.has(id));
+  for (const [id, m] of poiMarkers) put(id, m, visPoiIds.has(id));
+  for (const [id, m] of petMarkers) put(id, m, visPetIds.has(id));
 }
 
 function placeCard(p) {
@@ -342,7 +410,7 @@ function placeCard(p) {
   b.querySelector('.nm').textContent = p[lang] || p.ko;
   b.querySelector('.ko').textContent = p.ko;
   b.querySelector('.tag').textContent = p.genre[lang];
-  b.querySelector('.ar').textContent = p.area[lang] || p.area.ko;
+  b.querySelector('.ar').textContent = p.area[lang] || p.sigungu[lang] || p.area.ko;
   const stn = b.querySelector('.stn-tag');
   if (stn) stn.textContent = t.station_short(p.station[lang] || p.station.ko, p.station.m);
   const d = b.querySelector('.dist');
@@ -375,18 +443,24 @@ function select(id, kind, fly) {
   st.sel = id; st.selKind = kind;
   PLACES.forEach(refreshMarker);
   syncPoiMarkers();
+  syncPetMarkers();
   document.querySelectorAll('.card.on').forEach(c => c.classList.remove('on'));
   const c = $('card-' + id);
   if (c) { c.classList.add('on'); c.scrollIntoView({ block: 'nearest' }); }
 
-  const target = kind === 'poi' ? Store.getPoi(id) : PLACES.find(x => x.id === id);
+  const target = kind === 'poi' ? Store.getPoi(id)
+               : kind === 'pet' ? (PETS || []).find(x => x.id === id)
+               : PLACES.find(x => x.id === id);
   if (!target) return;
-  const ll = kind === 'poi' ? [target.lat, target.lng] : [target.mlat, target.mlng];
+  const ll = kind === 'place' ? [target.mlat, target.mlng] : [target.lat, target.lng];
   if (fly || map.getZoom() < 15) map.flyTo(ll, Math.max(map.getZoom(), 16), { duration: .6 });
   else map.panTo(ll);
+  setTimeout(updateMarkersInView, 50);
   if (window.innerWidth <= 860) setView('map');
 
-  $('detail').innerHTML = kind === 'poi' ? poiDetail(target) : placeDetail(target);
+  $('detail').innerHTML = kind === 'poi' ? poiDetail(target)
+                        : kind === 'pet' ? petDetail(target)
+                        : placeDetail(target);
   bindDetail(target, kind);
   $('detail').classList.add('open');
   $('scrim').classList.add('open');
@@ -401,7 +475,7 @@ function placeDetail(p) {
         <button class="iconbtn${isFav ? ' starred' : ''}" id="favbtn">${isFav ? '★' : '☆'}</button>
         <button class="iconbtn" id="closebtn">✕</button>
       </div>
-      <div class="eyebrow">${esc(p.gu[lang])} · ${esc(p.area[lang] || p.area.ko)}${dist ? ' · ' + esc(t.d_dist(dist)) : ''}</div>
+      <div class="eyebrow">${esc(p.sido[lang])} · ${esc(p.sigungu[lang])}${p.area[lang] ? ' · ' + esc(p.area[lang]) : ''}${dist ? ' · ' + esc(t.d_dist(dist)) : ''}</div>
       <h2>${esc(p[lang] || p.ko)}</h2>
       <p class="hangul">${esc(p.ko)}</p>
       <div class="badges">
@@ -413,7 +487,7 @@ function placeDetail(p) {
       <dt>${t.d_genre}</dt><dd>${esc(p.genre[lang])}</dd>
       ${p.detail[lang] ? `<dt>${t.d_detail}</dt><dd>${esc(p.detail[lang])}</dd>` : ''}
       ${p.station ? `<dt>${t.d_station}</dt><dd>${esc(t.station_short(p.station[lang] || p.station.ko, p.station.m))}</dd>` : ''}
-      <dt>${t.d_addr}</dt><dd class="addr">${esc(p.addr)}${p.prec !== 'shop' ? `<br><small>${t.approx}</small>` : ''}</dd>
+      <dt>${t.d_addr}</dt><dd class="addr">${esc(p.addr)}${p.prec === 'shop' ? '' : `<br><small>${p.prec === 'area' ? t.approx_area : t.approx}</small>`}</dd>
       ${p.tel ? `<dt>${t.d_tel}</dt><dd><a href="tel:${esc(p.tel.replace(/[^0-9+]/g, ''))}">${esc(p.tel)}</a></dd>` : ''}
       <dt>${t.d_rating}</dt><dd class="stars">${p.rating ? `★ ${p.rating} / 5　${esc(t.d_reviews(p.reviews))}` : '—'}</dd>
       <dt>${t.d_licence}</dt><dd>${esc(p.induty[lang])}</dd>
@@ -424,11 +498,11 @@ function placeDetail(p) {
       <div class="ja">${t.phrase_ja}</div>
     </div>
     <div class="links">
-      <a class="primary" href="${p.gmap}" target="_blank" rel="noopener">${t.link_g}<span class="arr">↗</span></a>
-      <a href="${p.naver}" target="_blank" rel="noopener">${t.link_n}<span class="arr">↗</span></a>
+      <a class="primary" href="${gmapUrl(p)}" target="_blank" rel="noopener">${t.link_g}<span class="arr">↗</span></a>
+      <a href="${naverUrl(p)}" target="_blank" rel="noopener">${t.link_n}<span class="arr">↗</span></a>
       ${p.insta ? `<a class="ig" href="${esc(p.insta)}" target="_blank" rel="noopener">${ICON_IG}${t.link_ig}<span class="arr">↗</span></a>` : ''}
       ${p.web ? `<a href="${esc(p.web)}" target="_blank" rel="noopener">${t.link_web}<span class="arr">↗</span></a>` : ''}
-      ${p.dc ? `<a href="${p.dc}" target="_blank" rel="noopener">${t.link_d}<span class="arr">↗</span></a>` : ''}
+      ${p.rid ? `<a href="${dcUrl(p)}" target="_blank" rel="noopener">${t.link_d}<span class="arr">↗</span></a>` : ''}
       ${p.tel ? `<a href="tel:${esc(p.tel.replace(/[^0-9+]/g, ''))}">${t.link_tel}<span class="arr">↗</span></a>` : ''}
     </div>
     <div class="foot">${t.foot}</div>`;
@@ -443,7 +517,7 @@ function poiDetail(p) {
       ${p.note ? `<p class="note">${esc(p.note)}</p>` : ''}
     </div>
     <div class="links">
-      <a class="primary" href="https://www.google.com/maps/search/?api=1&query=${p.lat}%2C${p.lng}" target="_blank" rel="noopener">${t.link_g}<span class="arr">↗</span></a>
+      <a class="primary" href="${gmapUrl(p)}" target="_blank" rel="noopener">${t.link_g}<span class="arr">↗</span></a>
       ${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">${t.link_mine_url}<span class="arr">↗</span></a>` : ''}
       <button class="rowbtn" id="editpin">${t.mine_name} / ${t.mine_note}</button>
       <button class="rowbtn danger" id="delpin">${t.del}</button>
@@ -452,6 +526,7 @@ function poiDetail(p) {
 
 function bindDetail(target, kind) {
   $('closebtn').onclick = closeDetail;
+  if (kind === 'pet') return;
   if (kind === 'poi') {
     $('editpin').onclick = () => openPoiEditor(target);
     $('delpin').onclick = () => {
@@ -472,6 +547,7 @@ function closeDetail() {
   st.sel = null; st.selKind = null;
   PLACES.forEach(refreshMarker);
   syncPoiMarkers();
+  syncPetMarkers();
   document.querySelectorAll('.card.on').forEach(c => c.classList.remove('on'));
 }
 
@@ -541,6 +617,106 @@ function updateStationVisibility() {
   const el = stationLayer._map ? stationLayer : null;
   if (!el) return;
   document.body.dataset.stations = z >= 15 ? 'labels' : (z >= 13 ? 'dots' : 'off');
+}
+
+/* ---------- 動物病院・ペットショップ ---------- */
+async function ensurePets() {
+  if ((st.vet || st.shop) && !PETS) {
+    PETS = await fetch('data/pets.json').then(r => r.json());
+  }
+  syncPetMarkers();
+  render();
+}
+
+function petShown(p) {
+  if (p.type === 'vet') return st.vet;
+  return st.shop;   // shop / groom / park / train はまとめて「ペットショップ」側
+}
+
+function petMatch(p) {
+  if (!petShown(p)) return false;
+  if (st.favonly || st.ter || st.mineonly || st.kind || st.genre) return false;
+  if (st.sido && p.sido.ko !== st.sido) return false;
+  if (st.sigungu && p.sigungu.ko !== st.sigungu) return false;
+  if (st.q) {
+    const h = (p.ko + p.ja + p.en + p.kind.ja + p.kind.en + p.addr +
+               p.sigungu.ja + p.sigungu.en + p.sigungu.ko).toLowerCase();
+    if (!h.includes(st.q.toLowerCase())) return false;
+  }
+  return true;
+}
+
+function petClass(p) {
+  return 'mkw pet ' + p.type + (p.h24 ? ' h24' : '') +
+         (st.sel === p.id && st.selKind === 'pet' ? ' on' : '');
+}
+
+function syncPetMarkers() {
+  for (const p of (PETS || [])) {
+    if (!visPetIds.has(p.id)) continue;
+    let m = petMarkers.get(p.id);
+    if (!m) {
+      m = L.marker([p.lat, p.lng], {
+        icon: L.divIcon({ className: petClass(p),
+                          html: `<span class="mk ${p.type === 'vet' ? 'vet' : 'shop'}"></span>`,
+                          iconSize: [13, 13], iconAnchor: [6.5, 6.5] }),
+        title: p.ja, riseOnHover: true,
+      });
+      m.on('click', () => select(p.id, 'pet'));
+      petMarkers.set(p.id, m);
+    } else if (m._icon) {
+      m._icon.className = petClass(p) + ' leaflet-marker-icon leaflet-div-icon leaflet-zoom-animated leaflet-interactive';
+    }
+  }
+}
+
+function petCard(p) {
+  const li = document.createElement('li');
+  const b = document.createElement('button');
+  b.type = 'button';
+  b.className = 'card pet ' + p.type + (st.sel === p.id && st.selKind === 'pet' ? ' on' : '');
+  b.id = 'card-' + p.id;
+  b.innerHTML = `<span class="bullet ${p.type === 'vet' ? 'v' : 'p'}"></span>` +
+    `<span class="nm"></span><span class="ko"></span>` +
+    `<span class="meta"><span class="tag ${p.type === 'vet' ? 'v' : 'p'}"></span>` +
+    `${p.h24 ? `<span class="tag h24">${t.vet_24h}</span>` : ''}` +
+    `<span class="ar"></span></span>` +
+    `<span class="aside">${st.here ? '<span class="dist"></span>' : ''}</span>`;
+  b.querySelector('.nm').textContent = p[lang] || p.ko;
+  b.querySelector('.ko').textContent = p.ko;
+  b.querySelector('.tag').textContent = p.kind[lang];
+  b.querySelector('.ar').textContent = p.sigungu[lang] || p.sigungu.ko;
+  const d = b.querySelector('.dist');
+  if (d) d.textContent = fmtDist(distance(st.here[0], st.here[1], p.lat, p.lng));
+  b.onclick = () => select(p.id, 'pet', true);
+  li.appendChild(b);
+  return li;
+}
+
+function petDetail(p) {
+  const dist = st.here ? fmtDist(distance(st.here[0], st.here[1], p.lat, p.lng)) : null;
+  return `<div class="top">
+      <div class="dbtns"><button class="iconbtn" id="closebtn">✕</button></div>
+      <div class="eyebrow">${esc(p.sido[lang])} · ${esc(p.sigungu[lang])}${dist ? ' · ' + esc(t.d_dist(dist)) : ''}</div>
+      <h2>${esc(p[lang] || p.ko)}</h2>
+      <p class="hangul">${esc(p.ko)}</p>
+      <div class="badges">
+        <span class="badge ${p.type === 'vet' ? 'vet' : 'shop'}">${esc(p.kind[lang])}</span>
+        ${p.h24 ? `<span class="badge h24">${t.vet_24h}</span>` : ''}
+      </div>
+    </div>
+    <dl class="dl">
+      <dt>${t.d_kind}</dt><dd>${esc(p.kind[lang])}（${esc(p.cate_ko)}）</dd>
+      <dt>${t.d_addr}</dt><dd class="addr">${esc(p.addr)}</dd>
+      ${p.tel ? `<dt>${t.d_tel}</dt><dd><a href="tel:${esc(p.tel.replace(/[^0-9+]/g, ''))}">${esc(p.tel)}</a></dd>` : ''}
+    </dl>
+    <div class="links">
+      <a class="primary" href="${gmapUrl(p)}" target="_blank" rel="noopener">${t.link_g}<span class="arr">↗</span></a>
+      <a href="${naverUrl(p)}" target="_blank" rel="noopener">${t.link_n}<span class="arr">↗</span></a>
+      ${p.insta ? `<a class="ig" href="${esc(p.insta)}" target="_blank" rel="noopener">${ICON_IG}${t.link_ig}<span class="arr">↗</span></a>` : ''}
+      ${p.web ? `<a href="${esc(p.web)}" target="_blank" rel="noopener">${t.link_web}<span class="arr">↗</span></a>` : ''}
+      ${p.tel ? `<a href="tel:${esc(p.tel.replace(/[^0-9+]/g, ''))}">${t.link_tel}<span class="arr">↗</span></a>` : ''}
+    </div>`;
 }
 
 /* ---------- 自分のピン ---------- */
