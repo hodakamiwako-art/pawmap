@@ -14,9 +14,12 @@
   --ochre-soft:#E0C09A;
   --ochre-wash:#F0E4D5;
   --star:#C79A2E;
-  --mine:#3D6BA8;
-  --mine-wash:#DFE7F2;
-  --mine-soft:#A9BEDB;
+  --mine:#C1332B;
+  --mine-wash:#F8E3E0;
+  --mine-soft:#E9B2AC;
+  --ig:#9B3D6E;
+  --ig-wash:#F4E4EE;
+  --ig-soft:#DDB4CC;
   --shadow:0 1px 2px rgba(22,31,26,.06),0 8px 24px rgba(22,31,26,.07);
   --shadow-lg:0 2px 6px rgba(22,31,26,.10),0 24px 60px rgba(22,31,26,.18);
   --f-disp:"Zen Old Mincho","Hiragino Mincho ProN",serif;
@@ -30,7 +33,8 @@
     --ground:#0D120F; --surface:#151D18; --surface-2:#1E2822; --line:#2C3A32; --line-soft:#232F28;
     --ink:#E4EBE5; --ink-2:#B4C2B8; --muted:#8A9A8F; --jade:#71C4A0; --jade-soft:#2E5A48;
     --jade-wash:#172A22; --ochre:#D79A5C; --ochre-soft:#5C4527; --ochre-wash:#2A2018; --star:#D9B455;
-    --mine:#7BA6DE; --mine-wash:#17202D; --mine-soft:#2F4666;
+    --mine:#F28B80; --mine-wash:#2E1A17; --mine-soft:#6E3A34;
+    --ig:#E495C0; --ig-wash:#2A1A24; --ig-soft:#5C2F47;
     --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
     --shadow-lg:0 2px 6px rgba(0,0,0,.5),0 24px 60px rgba(0,0,0,.6);
     color-scheme:dark;
@@ -40,7 +44,8 @@
   --ground:#0D120F; --surface:#151D18; --surface-2:#1E2822; --line:#2C3A32; --line-soft:#232F28;
   --ink:#E4EBE5; --ink-2:#B4C2B8; --muted:#8A9A8F; --jade:#71C4A0; --jade-soft:#2E5A48;
   --jade-wash:#172A22; --ochre:#D79A5C; --ochre-soft:#5C4527; --ochre-wash:#2A2018; --star:#D9B455;
-  --mine:#7BA6DE; --mine-wash:#17202D; --mine-soft:#2F4666;
+  --mine:#F28B80; --mine-wash:#2E1A17; --mine-soft:#6E3A34;
+  --ig:#E495C0; --ig-wash:#2A1A24; --ig-soft:#5C2F47;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
   --shadow-lg:0 2px 6px rgba(0,0,0,.5),0 24px 60px rgba(0,0,0,.6);
   color-scheme:dark;
@@ -320,7 +325,7 @@ html:not([data-theme="light"]) .leaflet-control-attribution{background:rgba(21,2
 
 /* ---------- 自分のピン ---------- */
 .mk.u{background:var(--mine)}
-.mkw.mine .mk{border-radius:3px}
+.mkw.mine .mk{border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,.45)}
 .card.mine .bullet.u{background:var(--mine);border-radius:3px}
 .tag.u{background:var(--mine-wash);color:var(--mine);font-weight:500}
 .legend .k.u{background:var(--mine);border-radius:3px}
@@ -385,9 +390,9 @@ html:not([data-theme="light"]) .modal .warn{color:var(--ochre)}
 .stn-tag{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--muted);white-space:nowrap}
 .stn-tag::before{content:"";width:7px;height:7px;border-radius:50%;border:1.5px solid var(--muted);flex:none}
 .ig-tag{font-size:9.5px;font-weight:700;letter-spacing:.06em;padding:1px 4px;border-radius:4px;
-  border:1px solid var(--mine-soft);color:var(--mine)}
-.links a.ig{border-color:var(--mine-soft);color:var(--mine)}
-.links a.ig:hover{background:var(--mine-wash)}
+  border:1px solid var(--ig-soft);color:var(--ig)}
+.links a.ig{border-color:var(--ig-soft);color:var(--ig)}
+.links a.ig:hover{background:var(--ig-wash)}
 .links a.ig svg{flex:none;margin-right:2px}
 .links a{gap:8px}
 .dl dd a{color:var(--jade);text-decoration:none}
