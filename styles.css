@@ -86,7 +86,17 @@ a{color:var(--jade)}
 /* ---------- panel ---------- */
 .panel{border-right:1px solid var(--line);background:var(--surface);display:flex;flex-direction:column;min-height:0}
 .controls{padding:13px 15px 11px;border-bottom:1px solid var(--line-soft);display:flex;flex-direction:column;gap:10px}
-.search{position:relative;display:flex}
+.crow{display:flex;gap:8px}
+.cbody{display:flex;flex-direction:column;gap:10px}
+.ftoggle{display:none;align-items:center;gap:6px;flex:none;border:1px solid var(--line);
+  background:var(--ground);border-radius:9px;padding:0 11px;cursor:pointer;font-size:13px;color:var(--ink-2)}
+.ftoggle svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round}
+.ftoggle[aria-expanded="true"]{background:var(--jade);border-color:var(--jade);color:#fff}
+.fcount{min-width:18px;height:18px;border-radius:9px;background:var(--jade);color:#fff;
+  font-size:11px;font-weight:700;display:grid;place-items:center;padding:0 5px}
+.ftoggle[aria-expanded="true"] .fcount{background:rgba(255,255,255,.25)}
+.fcount[hidden]{display:none}   /* display:grid above would beat the hidden attribute */
+.search{position:relative;display:flex;flex:1;min-width:0}
 .search input{
   width:100%;font:inherit;font-size:14px;padding:9px 12px 9px 34px;
   background:var(--ground);border:1px solid var(--line);border-radius:9px;color:var(--ink);
@@ -147,6 +157,7 @@ a{color:var(--jade)}
 .tag.g{background:var(--jade-wash);color:var(--jade);font-weight:500}
 .tag.o{background:var(--ochre-wash);color:var(--ochre);font-weight:500}
 .empty{padding:40px 20px;text-align:center;color:var(--muted);font-size:13px}
+.mapcount{display:none}
 
 /* ---------- map ---------- */
 .mapwrap{position:relative;background:var(--ground)}
@@ -255,10 +266,32 @@ html:not([data-theme="light"]) .leaflet-control-attribution{background:rgba(21,2
   .mobtabs button{flex:1;border:1px solid var(--line);background:var(--ground);border-radius:8px;padding:7px;font-size:13px;cursor:pointer;color:var(--muted)}
   .mobtabs button[aria-pressed="true"]{background:var(--jade);border-color:var(--jade);color:#fff;font-weight:500}
   .panel{border-right:0}
-  body[data-view="map"] .panel{display:none}
+  .app{position:relative}
   body[data-view="list"] .mapwrap{display:none}
+  .ftoggle{display:flex}
+  body[data-filters="closed"] .cbody{display:none}
+
+  /* on the map, the controls float above it instead of disappearing */
+  body[data-view="map"] .panel{
+    position:absolute;top:0;left:0;right:0;z-index:600;background:var(--surface);
+    border-bottom:1px solid var(--line);box-shadow:var(--shadow);
+  }
+  body[data-view="map"] .panel .list,
+  body[data-view="map"] .panel .tally{display:none}
+  body[data-view="map"] .controls{border-bottom:0}
+  body[data-view="map"] .mapwrap{grid-area:1/1}
+  /* our own zoom buttons sit bottom-right; Leaflet's would hide under the bar */
+  .leaflet-control-zoom{display:none}
+  .mapcount{
+    display:block;position:absolute;left:10px;top:calc(100% + 9px);z-index:600;
+    background:var(--surface);border:1px solid var(--line);border-radius:999px;
+    padding:4px 12px;font-size:12px;color:var(--muted);box-shadow:var(--shadow);white-space:nowrap;
+  }
+  .mapcount b{color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums}
+  body[data-view="list"] .mapcount{display:none}
   .legend{display:none}
   .mapbtns{bottom:22px;right:10px}
+  .mapwrap{grid-area:1/1}
   /* detail becomes a bottom sheet */
   .detail{
     top:auto;left:0;right:0;bottom:0;width:100%;max-height:74vh;border-left:0;

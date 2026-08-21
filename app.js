@@ -113,6 +113,13 @@ async function init() {
     document.querySelectorAll('.seg button').forEach((o, i) => o.setAttribute('aria-pressed', String(i === 0)));
     render();
   };
+  $('ftoggle').onclick = () => {
+    const open = document.body.dataset.filters !== 'closed';
+    document.body.dataset.filters = open ? 'closed' : 'open';
+    $('ftoggle').setAttribute('aria-expanded', String(!open));
+  };
+  document.body.dataset.filters = 'closed';   // collapsed on phones; ignored on desktop
+
   $('locate').onclick = locate;
   $('fitall').onclick = fitAll;
   $('scrim').onclick = closeDetail;
@@ -160,6 +167,12 @@ function render() {
     vis.sort((a, b) => (b.rating || 0) - (a.rating || 0) || (b.reviews || 0) - (a.reviews || 0));
   }
   $('n').textContent = vis.length;
+  $('nmap').textContent = vis.length;
+  const active = [st.q, st.kind, st.genre, st.area].filter(Boolean).length +
+                 (st.ter ? 1 : 0) + (st.favonly ? 1 : 0);
+  const badge = $('fcount');
+  badge.textContent = active;
+  badge.hidden = active === 0;
 
   const list = $('list');
   list.innerHTML = '';

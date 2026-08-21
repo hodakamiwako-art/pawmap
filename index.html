@@ -37,10 +37,18 @@
 <div class="app">
   <aside class="panel">
     <div class="controls">
-      <label class="search">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
-        <input id="q" type="search" placeholder="店名・ジャンル・エリアで検索（한글もOK）" aria-label="検索">
-      </label>
+      <div class="crow">
+        <label class="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+          <input id="q" type="search" placeholder="店名・ジャンル・エリアで検索（한글もOK）" aria-label="検索">
+        </label>
+        <button class="ftoggle" id="ftoggle" aria-expanded="false" aria-controls="cbody">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M7 12h10M10 17h4"/></svg>
+          <span>絞り込み</span>
+          <span class="fcount" id="fcount" hidden>0</span>
+        </button>
+      </div>
+      <div class="cbody" id="cbody">
       <div class="seg" role="group" aria-label="種別">
         <button data-kind="" aria-pressed="true">すべて</button>
         <button data-kind="カフェ" aria-pressed="false"><span class="dot"></span>カフェ</button>
@@ -61,9 +69,11 @@
         <label class="chk t"><input type="checkbox" id="ter">テラス席あり</label>
         <label class="chk f"><input type="checkbox" id="favonly">お気に入りだけ</label>
       </div>
+      </div>
     </div>
     <div class="tally"><span><b id="n">100</b> 軒</span><button class="reset" id="reset">絞り込みを解除</button></div>
     <ul class="list" id="list"></ul>
+    <div class="mapcount"><b id="nmap">100</b> 軒</div>
   </aside>
 
   <main class="mapwrap">
