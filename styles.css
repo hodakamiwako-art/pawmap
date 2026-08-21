@@ -14,6 +14,9 @@
   --ochre-soft:#E0C09A;
   --ochre-wash:#F0E4D5;
   --star:#C79A2E;
+  --mine:#3D6BA8;
+  --mine-wash:#DFE7F2;
+  --mine-soft:#A9BEDB;
   --shadow:0 1px 2px rgba(22,31,26,.06),0 8px 24px rgba(22,31,26,.07);
   --shadow-lg:0 2px 6px rgba(22,31,26,.10),0 24px 60px rgba(22,31,26,.18);
   --f-disp:"Zen Old Mincho","Hiragino Mincho ProN",serif;
@@ -27,6 +30,7 @@
     --ground:#0D120F; --surface:#151D18; --surface-2:#1E2822; --line:#2C3A32; --line-soft:#232F28;
     --ink:#E4EBE5; --ink-2:#B4C2B8; --muted:#8A9A8F; --jade:#71C4A0; --jade-soft:#2E5A48;
     --jade-wash:#172A22; --ochre:#D79A5C; --ochre-soft:#5C4527; --ochre-wash:#2A2018; --star:#D9B455;
+    --mine:#7BA6DE; --mine-wash:#17202D; --mine-soft:#2F4666;
     --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
     --shadow-lg:0 2px 6px rgba(0,0,0,.5),0 24px 60px rgba(0,0,0,.6);
     color-scheme:dark;
@@ -36,6 +40,7 @@
   --ground:#0D120F; --surface:#151D18; --surface-2:#1E2822; --line:#2C3A32; --line-soft:#232F28;
   --ink:#E4EBE5; --ink-2:#B4C2B8; --muted:#8A9A8F; --jade:#71C4A0; --jade-soft:#2E5A48;
   --jade-wash:#172A22; --ochre:#D79A5C; --ochre-soft:#5C4527; --ochre-wash:#2A2018; --star:#D9B455;
+  --mine:#7BA6DE; --mine-wash:#17202D; --mine-soft:#2F4666;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
   --shadow-lg:0 2px 6px rgba(0,0,0,.5),0 24px 60px rgba(0,0,0,.6);
   color-scheme:dark;
@@ -303,3 +308,71 @@ html:not([data-theme="light"]) .leaflet-control-attribution{background:rgba(21,2
   .detail h2{font-size:20px}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+
+/* ---------- 言語切替 ---------- */
+.langsw{display:flex;background:var(--surface-2);border-radius:8px;padding:2px;gap:2px;flex:none}
+.langsw button{border:0;background:none;border-radius:6px;padding:5px 10px;cursor:pointer;
+  font-size:12px;font-weight:500;color:var(--muted)}
+.langsw button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+#account.on{border-color:var(--jade-soft);color:var(--jade)}
+#account span{max-width:16ch;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:inline-block;vertical-align:bottom}
+
+/* ---------- 自分のピン ---------- */
+.mk.u{background:var(--mine)}
+.mkw.mine .mk{border-radius:3px}
+.card.mine .bullet.u{background:var(--mine);border-radius:3px}
+.tag.u{background:var(--mine-wash);color:var(--mine);font-weight:500}
+.legend .k.u{background:var(--mine);border-radius:3px}
+.detail .note{margin:10px 0 0;color:var(--ink-2);font-size:14px;white-space:pre-wrap}
+.rowbtn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;
+  border:1px solid var(--line);border-radius:10px;padding:11px 14px;font-size:13.5px;
+  background:var(--surface);color:var(--ink);cursor:pointer}
+.rowbtn:hover{background:var(--surface-2)}
+.rowbtn.danger{color:#B3261E;border-color:#E4C4C1}
+:root[data-theme="dark"] .rowbtn.danger,
+html:not([data-theme="light"]) .rowbtn.danger{color:#F2B8B5;border-color:#5C3B39}
+
+.maphint{position:absolute;left:50%;top:14px;transform:translateX(-50%);z-index:600;
+  background:var(--jade);color:#fff;border-radius:999px;padding:8px 18px;font-size:13px;
+  box-shadow:var(--shadow-lg);white-space:nowrap}
+body[data-placing="on"] #map{cursor:crosshair}
+
+/* ---------- 地下鉄 ---------- */
+.stw{pointer-events:none}
+.stn{display:block;width:7px;height:7px;border-radius:50%;background:var(--surface);
+  border:2px solid var(--ink-2);box-shadow:0 0 0 1px rgba(255,255,255,.6)}
+.stl{position:absolute;left:12px;top:-3px;white-space:nowrap;font-size:10.5px;
+  color:var(--ink-2);text-shadow:0 0 3px var(--surface),0 0 3px var(--surface),0 0 3px var(--surface)}
+body[data-stations="off"] .stw{display:none}
+body[data-stations="dots"] .stl{display:none}
+
+/* ---------- モーダル ---------- */
+.modal{
+  position:fixed;left:50%;top:50%;transform:translate(-50%,-46%) scale(.97);opacity:0;pointer-events:none;
+  width:min(420px,calc(100vw - 32px));background:var(--surface);border:1px solid var(--line);
+  border-radius:16px;box-shadow:var(--shadow-lg);z-index:1100;padding:22px;
+  transition:opacity .18s,transform .18s;max-height:86vh;overflow-y:auto;
+}
+.modal.open{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}
+.modal h3{font-family:var(--f-disp);font-size:19px;margin:0 0 10px}
+.modal .lead{margin:0 0 14px;font-size:13.5px;color:var(--ink-2);line-height:1.6}
+.modal .lead.small{font-size:12px;color:var(--muted)}
+.field{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.field span{font-size:11.5px;letter-spacing:.08em;color:var(--muted)}
+.field input,.field textarea{
+  font:inherit;font-size:14px;padding:9px 11px;border-radius:9px;resize:vertical;
+  border:1px solid var(--line);background:var(--ground);color:var(--ink);
+}
+.mrow{display:flex;gap:9px;justify-content:flex-end;margin-top:4px}
+.primarybtn{border:1px solid var(--jade);background:var(--jade);color:#fff;font-weight:500;
+  border-radius:9px;padding:9px 18px;cursor:pointer;font-size:13.5px}
+.primarybtn:hover{filter:brightness(1.07)}
+.primarybtn:disabled{opacity:.5;cursor:default}
+
+@media(max-width:860px){
+  .langsw button{padding:5px 8px;font-size:11.5px}
+  #account{padding:6px 10px;font-size:11.5px}
+  #account span{max-width:9ch}
+  .maphint{font-size:12px;padding:7px 14px}
+}

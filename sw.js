@@ -1,5 +1,5 @@
 /* ソウル犬同伴マップ — Service Worker */
-const VERSION = 'pawmap-v1';
+const VERSION = 'pawmap-v2';
 const SHELL = VERSION + '-shell';
 const TILES = VERSION + '-tiles';
 const TILE_LIMIT = 400;
@@ -9,9 +9,14 @@ const ASSETS = [
   'index.html',
   'styles.css',
   'app.js',
+  'config.js',
+  'i18n.js',
+  'store.js',
   'data/places.json',
+  'data/subway.json',
   'vendor/leaflet.js',
   'vendor/leaflet.css',
+  'vendor/supabase.js',
   'manifest.webmanifest',
   'icons/icon-192.png',
   'icons/icon-512.png',

@@ -1,0 +1,7 @@
+[out:json][timeout:300];
+(
+  node["railway"="station"]["station"="subway"](37.40,126.74,37.72,127.20);
+  node["railway"="station"]["subway"="yes"](37.40,126.74,37.72,127.20);
+  node["railway"="station"](37.40,126.74,37.72,127.20);
+);
+out tags center;

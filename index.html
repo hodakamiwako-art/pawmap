@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>ソウル犬同伴マップ</title>
-<meta name="description" content="ソウルで犬と一緒に入れるカフェ・レストラン100軒。全店が韓国政府の登録店で店内同伴OK。日本語とハングルの両方で、地図から探せます。">
+<title>ソウル犬同伴マップ / Seoul Dog-Friendly Map</title>
+<meta name="description" content="ソウルで犬と一緒に店内に入れるカフェ・レストラン486軒。韓国政府の登録店だけを、日本語・英語・ハングルで地図から探せます。">
 <meta name="theme-color" content="#2F6B54">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon-192.png">
@@ -20,18 +20,22 @@
 <body>
 
 <header class="mast">
-  <h1><span class="sub">SEOUL · DOG-FRIENDLY</span>ソウル犬同伴マップ</h1>
+  <h1><span class="sub" id="t-eyebrow">SEOUL · DOG-FRIENDLY</span><span id="t-title">ソウル犬同伴マップ</span></h1>
   <div class="assurance">
     <svg class="paw" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="6.5" cy="9" rx="2.6" ry="3.4"/><ellipse cx="12" cy="6.6" rx="2.7" ry="3.6"/><ellipse cx="17.5" cy="9" rx="2.6" ry="3.4"/><path d="M12 12.4c3.4 0 6 2.5 6 5 0 1.7-1.4 2.9-3.2 2.9-1.1 0-1.9-.5-2.8-.5s-1.7.5-2.8.5C7.4 20.3 6 19.1 6 17.4c0-2.5 2.6-5 6-5z"/></svg>
-    <span>全<b>100</b>軒すべて<b>店内に犬と入れます</b></span>
+    <span id="t-assurance"></span>
   </div>
   <span class="spacer"></span>
-  <button class="ghost" id="install">ホーム画面に追加</button>
+  <div class="langsw" role="group" aria-label="Language">
+    <button data-lang="ja">日本語</button><button data-lang="en">EN</button>
+  </div>
+  <button class="ghost" id="account"><span id="t-login">ログイン</span></button>
+  <button class="ghost" id="install"></button>
 </header>
 
 <div class="mobtabs" role="tablist">
-  <button id="tabList" aria-pressed="true">リスト</button>
-  <button id="tabMap" aria-pressed="false">地図</button>
+  <button id="tabList" aria-pressed="true"></button>
+  <button id="tabMap" aria-pressed="false"></button>
 </div>
 
 <div class="app">
@@ -40,65 +44,69 @@
       <div class="crow">
         <label class="search">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
-          <input id="q" type="search" placeholder="店名・ジャンル・エリアで検索（한글もOK）" aria-label="検索">
+          <input id="q" type="search" aria-label="search">
         </label>
         <button class="ftoggle" id="ftoggle" aria-expanded="false" aria-controls="cbody">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M7 12h10M10 17h4"/></svg>
-          <span>絞り込み</span>
+          <span id="t-filters"></span>
           <span class="fcount" id="fcount" hidden>0</span>
         </button>
       </div>
       <div class="cbody" id="cbody">
-      <div class="seg" role="group" aria-label="種別">
-        <button data-kind="" aria-pressed="true">すべて</button>
-        <button data-kind="カフェ" aria-pressed="false"><span class="dot"></span>カフェ</button>
-        <button data-kind="レストラン" aria-pressed="false"><span class="dot"></span>ごはん</button>
-      </div>
-      <div class="selrow">
-        <select id="genre" aria-label="ジャンル"><option value="">ジャンル：すべて</option></select>
-        <select id="area" aria-label="区"><option value="">区：すべて</option></select>
-      </div>
-      <div class="selrow">
-        <select id="sort" aria-label="並び順">
-          <option value="area">並び：エリア順</option>
-          <option value="dist">並び：現在地から近い順</option>
-          <option value="rating">並び：評価が高い順</option>
-        </select>
-      </div>
-      <div class="checks">
-        <label class="chk t"><input type="checkbox" id="ter">テラス席あり</label>
-        <label class="chk f"><input type="checkbox" id="favonly">お気に入りだけ</label>
-      </div>
+        <div class="seg" role="group" aria-label="kind">
+          <button data-kind="" aria-pressed="true"></button>
+          <button data-kind="cafe" aria-pressed="false"><span class="dot"></span></button>
+          <button data-kind="meal" aria-pressed="false"><span class="dot"></span></button>
+        </div>
+        <div class="selrow">
+          <select id="genre" aria-label="cuisine"></select>
+          <select id="area" aria-label="district"></select>
+        </div>
+        <div class="selrow">
+          <select id="sort" aria-label="sort"></select>
+        </div>
+        <div class="checks">
+          <label class="chk t"><input type="checkbox" id="ter"><span></span></label>
+          <label class="chk f"><input type="checkbox" id="favonly"><span></span></label>
+          <label class="chk m"><input type="checkbox" id="mineonly"><span></span></label>
+          <label class="chk s"><input type="checkbox" id="subway"><span></span></label>
+        </div>
       </div>
     </div>
-    <div class="tally"><span><b id="n">100</b> 軒</span><button class="reset" id="reset">絞り込みを解除</button></div>
+    <div class="tally"><span><b id="n">0</b> <span id="t-unit"></span></span><button class="reset" id="reset"></button></div>
     <ul class="list" id="list"></ul>
-    <div class="mapcount"><b id="nmap">100</b> 軒</div>
+    <div class="mapcount"><b id="nmap">0</b> <span id="t-unit2"></span></div>
   </aside>
 
   <main class="mapwrap">
     <div id="map"></div>
+    <div class="maphint" id="maphint" hidden></div>
     <div class="mapbtns">
-      <button class="mapbtn" id="locate" aria-label="現在地を表示" title="現在地を表示">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.2" fill="currentColor" stroke="none"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
-      </button>
-      <button class="mapbtn" id="fitall" aria-label="全体を表示" title="全体を表示">
-        <svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
-      </button>
+      <button class="mapbtn" id="addpin"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
+      <button class="mapbtn" id="locate"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.2" fill="currentColor" stroke="none"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></button>
+      <button class="mapbtn" id="fitall"><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
     </div>
     <div class="legend">
-      <h4>凡例</h4>
-      <div class="lrow"><span class="k j"></span>カフェ・ベーカリー</div>
-      <div class="lrow"><span class="k o"></span>レストラン・食事</div>
-      <div class="lrow"><span class="k t"></span>テラス席あり</div>
+      <h4 id="t-legend"></h4>
+      <div class="lrow"><span class="k j"></span><span id="t-lcafe"></span></div>
+      <div class="lrow"><span class="k o"></span><span id="t-lmeal"></span></div>
+      <div class="lrow"><span class="k t"></span><span id="t-lter"></span></div>
+      <div class="lrow"><span class="k u"></span><span id="t-lmine"></span></div>
     </div>
   </main>
 </div>
 
 <div class="scrim" id="scrim"></div>
-<aside class="detail" id="detail" aria-label="店舗の詳細"></aside>
+<aside class="detail" id="detail" aria-label="details"></aside>
 
+<div class="scrim" id="modalScrim"></div>
+<div class="modal" id="modal" role="dialog" aria-modal="true"></div>
+
+<script src="config.js"></script>
 <script src="vendor/leaflet.js"></script>
+<script src="vendor/supabase.js"></script>
+<script src="i18n.js"></script>
+<script src="store.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
