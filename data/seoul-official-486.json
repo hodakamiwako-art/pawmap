@@ -1,0 +1,3890 @@
+[
+ {
+  "rnum": 1,
+  "bsshNm": "(주) 세녹코리아",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 동작구 사당로 304(1층,2층,3층 사당동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 2,
+  "bsshNm": "(주) 예빈당",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 영등포구 여의도한강공원길 231(2층 205호 여의도동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 3,
+  "bsshNm": "(주)커피 리브레",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 성미산로29길 17-8(1,2,지1층 연남동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 4,
+  "bsshNm": "(주)커피빈코리아 몽촌토성역점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 위례성대로 2(장은빌딩 1층 방이동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 5,
+  "bsshNm": "(주)커피빈코리아 송파파크하비오점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 송파대로 111(205동 1층 문정동, 파크하비오)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 6,
+  "bsshNm": "(주)툭툭누들타이(티티그릴)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 논현로152길 37(한서빌딩 지상1층 신사동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 7,
+  "bsshNm": "(주)플레이버타운",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 서울숲4길 18-7(1,2층 성수동1가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 8,
+  "bsshNm": "213점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 은평구 응암로21가길 27(1층 응암동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 9,
+  "bsshNm": "23플래터",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 잔다리로3안길 36(지하1층 서교동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 10,
+  "bsshNm": "79파운야드 목동41타워점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 양천구 목동동로 293(지상1층 1-44,45,46호 목동, 현대41타워)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 11,
+  "bsshNm": "97.7화씨",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 중구 난계로15길 41-7(지하1층 황학동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 12,
+  "bsshNm": "9램(9ram)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 포은로 105(2층 망원동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 13,
+  "bsshNm": "Always on(올웨이즈온)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 방배천로8길 16-12(1층 101호,102호 방배동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 14,
+  "bsshNm": "HeyVERT",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 서래로6길 25(1층 반포동, 궁전타운)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 15,
+  "bsshNm": "Hrr(흐르르)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 잠원로 201-12(1층 잠원동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 16,
+  "bsshNm": "LUV PLUTO 러브 플루토",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 불광천길 180(지하1층, 1층 101호 북가좌동, 아임빌)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 17,
+  "bsshNm": "OU_TOPOS(우토포스)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 방배로39길 42-7(1층 방배동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 18,
+  "bsshNm": "SECOND BREATH(세컨브레스)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 양재천로 95-2(1층 양재동, 태영빌딩)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 19,
+  "bsshNm": "Spring moment(스프링 모먼트)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 관악구 낙성대역3길 24(1층 102호 봉천동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 20,
+  "bsshNm": "errd(에르디)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 관악구 관악로12길 113(대원빌딩 1층 103호 봉천동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 21,
+  "bsshNm": "flot(플로)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 은평구 서오릉로 20-1(1층 녹번동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 22,
+  "bsshNm": "hebe coffee(헤베 커피)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 중구 필동로 32(낙원빌딩 1층 필동2가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 23,
+  "bsshNm": "pold coffee(폴드커피)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 종암로 214-3(1층 하월곡동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 24,
+  "bsshNm": "the whatever(더 왓에버)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강서구 마곡중앙2로 15(1층 115~119호 마곡동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 25,
+  "bsshNm": "ttitto 띠또분식",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 왕십리로 83-21(디타워 스트리트동 지1층 B110호, B111호 성수동1가, 아크로 서울포레스트)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 26,
+  "bsshNm": "生맥줏집",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 월드컵로29길 7(망원동, 지하1층)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 27,
+  "bsshNm": "강릉장칼 신내역점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 중랑구 용마산로 670(B동 2층 B225호,B226호,B227호,B228호 망우동, 신내역 프라디움 더 테라스)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 28,
+  "bsshNm": "개인공간",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 중랑구 용마산로 670(D동 DB105호 망우동, 신내역 프라디움 더 테라스)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 29,
+  "bsshNm": "고램지",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 아리랑로4길 5(1층 동선동5가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 30,
+  "bsshNm": "골목에 핀 생화",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 응암로 126(1층 북가좌동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 31,
+  "bsshNm": "과일 데일리프룻 금천점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 금천구 가산로 71(2층 1호 독산동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 32,
+  "bsshNm": "구십이도",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 천호대로110길 40(1층 능동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 33,
+  "bsshNm": "군자가라지(gunja garage)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 용마산로3길 95(2층 중곡동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 34,
+  "bsshNm": "굿피플초이스",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 양천구 중앙로 245(1층 신정동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 35,
+  "bsshNm": "그라메도(GRMD)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 용산구 두텁바위로1길 22(1층 갈월동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 36,
+  "bsshNm": "그랑웨이브(GRANWAVE)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 희우정로20길 63(1층 일부 좌측호 망원동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 37,
+  "bsshNm": "그레베르",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 광나루로 595(상가동 제지1층 제비3, 4호 광장동, 광장자이아파트)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 38,
+  "bsshNm": "그로그(GROG)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 위례성대로4길 23(1층 102,103호 방이동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 39,
+  "bsshNm": "그루버스",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 삼선교로16길 26-3(1층 삼선동2가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 40,
+  "bsshNm": "그리팅(Greetin')",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 동대문구 천호대로83길 9(1층 장안동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 41,
+  "bsshNm": "그린룸 GRIN ROOM",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 왕십리로 136(3층 성수동1가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 42,
+  "bsshNm": "금수연남",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 동교로39길 7(2층 연남동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 43,
+  "bsshNm": "금은방",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 송정14길 1(지1층 송정동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 44,
+  "bsshNm": "기절초풍물닭갈비",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 자양로13길 88-1(자양동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 45,
+  "bsshNm": "기호",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 삼개로 28-5(지1,1층 도화동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 46,
+  "bsshNm": "까치집",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강서구 강서로5나길 16(1층 화곡동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 47,
+  "bsshNm": "꼬메",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강동구 올림픽로91길 30(상가동 1층 131호 암사동, 힐스테이트 강동 리버뷰)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 48,
+  "bsshNm": "꼬미다 큐큐큐 (Comida QQQ)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 강남대로12길 41(101,102호 양재동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 49,
+  "bsshNm": "꾸며주는언니＆화창한오후cafe",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 은평구 진관4로 48-8(제714동 제1층 제상가102호 진관동, 은평뉴타운상림마을)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 50,
+  "bsshNm": "나니아(narnia)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 삼학사로18길 5(지상1층 석촌동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 51,
+  "bsshNm": "나의 모양(my shape)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 역삼로69길 5(지상1층 101호 대치동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 52,
+  "bsshNm": "네가 있어 고마워",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 영등포구 양평로28길 33(제이동 1층 101호 양평동6가, 아트리버빌)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 53,
+  "bsshNm": "네임이즈마빈(NAME iS MAVIN) 망원한강점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 망원로 24(1층 우측호 망원동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 54,
+  "bsshNm": "노스티 상일점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강동구 상일로7길 11(101,102호 상일동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 55,
+  "bsshNm": "놀면뭐하개",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 금천구 남부순환로 1390(전영수내과의원 4층 독산동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 56,
+  "bsshNm": "누메로 뜨레쓰",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 성수일로 21(1층 성수동1가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 57,
+  "bsshNm": "누메로도스",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 상원1길 35-9(1층 성수동1가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 58,
+  "bsshNm": "누부크",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 양화진2길 13(사이넥스 합정 1,2층 합정동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 59,
+  "bsshNm": "누야그",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 희우정로10안길 7(1층 101호 망원동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 60,
+  "bsshNm": "뉴케이스 망원본점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 마포나루길 420(3층 망원동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 61,
+  "bsshNm": "늘",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 성북로14길 3(성북동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 62,
+  "bsshNm": "능동타코집",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 능동로32길 5(1층 능동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 63,
+  "bsshNm": "닐",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 연희맛로 17-7(1층 101호 연희동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 64,
+  "bsshNm": "다니엘 카페&펍 by waff",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 광나루로11길 45(1층 101호 송정동, 양지쉐르빌)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 65,
+  "bsshNm": "닥터로빈 서래마을점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 서래로6길 17(1층 반포동, 민유빌딩)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 66,
+  "bsshNm": "댕크(Dank)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 사평대로57길 96(1층 반포동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 67,
+  "bsshNm": "도그피에스",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 금천구 시흥대로39길 16(한영상가 3층 1호 시흥동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 68,
+  "bsshNm": "도라보울 신사",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 논현로175길 101-5(1층 신사동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 69,
+  "bsshNm": "도주",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 성미산로 190-3(1층 연남동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 70,
+  "bsshNm": "동막역",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 백범로16안길 33(지하1층 대흥동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 71,
+  "bsshNm": "두유라이크잇",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 성미산로29길 29-5(다온빌 1층 101호 연남동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 72,
+  "bsshNm": "디 진테제 카페",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 용산구 녹사평대로40다길 61(2층 이태원동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 73,
+  "bsshNm": "디아일",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 성수이로7가길 11(주상현원색 1층 성수동2가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 74,
+  "bsshNm": "디엠 합정점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 독막로3길 29(지하1층 서교동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 75,
+  "bsshNm": "디프(Diff)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 백제고분로45길 15(3층 송파동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 76,
+  "bsshNm": "라라브레드 수유점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강북구 노해로14길 8(짐랜드어린이집 1층 수유동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 77,
+  "bsshNm": "라아(Raah)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 연희로11라길 10-8(지층 연희동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 78,
+  "bsshNm": "라파리나 금호",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 금호로 67(지하1층 B02호 금호동2가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 79,
+  "bsshNm": "라프레아(Lafrea)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 금천구 시흥대로57길 5(웨스트밸리 1층 101~102호 시흥동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 80,
+  "bsshNm": "랑게(Langhe)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 독막로31길 10(1층 신수동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 81,
+  "bsshNm": "레발콩",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 방배천로 92(101호,102호,104호 방배동, 세양아르비채)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 82,
+  "bsshNm": "레오띠(LEOTTI)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 망원로2길 96(류버들 1층 101호 망원동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 83,
+  "bsshNm": "레이업(LAYUP)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 동대문구 전농로 153(2층 전농동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 84,
+  "bsshNm": "레인웨이커피",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강동구 천호대로170길 87(1층 103호 성내동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 85,
+  "bsshNm": "레츠잇치킨",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 왕십리로4길 12(1층 성수동1가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 86,
+  "bsshNm": "레커레커(LECKER LECKER)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 불광천길 278(1층 북가좌동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 87,
+  "bsshNm": "로데오라",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 압구정로50길 28(상가101동 지상1층 154호 신사동, 로데오현대아파트)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 88,
+  "bsshNm": "루이지",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 연희맛로 15(지하1~지상2층 연희동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 89,
+  "bsshNm": "룽디저트",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 금천구 가산로5길 14(해찬행복드림 1층 101호 가산동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 90,
+  "bsshNm": "르베지왕",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 연무장1길 15-1(1층 성수동2가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 91,
+  "bsshNm": "리몬 서울",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 동소문로6길 20-34(지상1층 동소문동2가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 92,
+  "bsshNm": "리브레리(Librairie)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 영등포구 양산로25길 3(1층 당산동3가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 93,
+  "bsshNm": "리요리요",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 방배천로18길 11(B동 104호 방배동, 방배 롯데캐슬 아르떼상가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 94,
+  "bsshNm": "리크커피클럽",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강동구 암사길 9(1층 101호 암사동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 95,
+  "bsshNm": "리트 하우스(Lit Haus)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 용산구 소월로2길 5(1층 후암동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 96,
+  "bsshNm": "리프레셔스",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 청두곶6길 8(1층 방배동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 97,
+  "bsshNm": "리플렉트",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 남부순환로347길 53(104호 서초동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 98,
+  "bsshNm": "림보",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 성덕정19길 17-1(1층 성수동2가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 99,
+  "bsshNm": "마그넷 케이크룸(MAGNETTT-cakeroom)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 종로구 사직로12길 1-2(1층 내자동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 100,
+  "bsshNm": "마나",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 용산구 이태원로54길 68-6(지1층 한남동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 101,
+  "bsshNm": "마더오프라인(MOTHER OFFLINE)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 용산구 이태원로55나길 6(1층 한남동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 102,
+  "bsshNm": "마우디(Maudie)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 연희로11길 18(1층 연희동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 103,
+  "bsshNm": "마이닥스",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 중랑구 면목로 306(2층 면목동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 104,
+  "bsshNm": "마이즈루",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 성덕정17길 7-1(1층 성수동2가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 105,
+  "bsshNm": "맘마",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 중대로 312(D.S 타워 1층 오금동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 106,
+  "bsshNm": "망고정(월계점)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 노원구 월계로55길 64(지상2층 203호 월계동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 107,
+  "bsshNm": "망깍지",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 망원로 67(2층 망원동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 108,
+  "bsshNm": "머치커피(muchcoffee)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 동작구 동작대로9길 43(1층 사당동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 109,
+  "bsshNm": "먹태의꿈",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 금호로 168(금호동1가,지상1층)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 110,
+  "bsshNm": "먼치스(MUNCHEZ)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 용산구 서빙고로 17(몰동 1층 1088호 한강로3가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 111,
+  "bsshNm": "멍뭉다방",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 중랑구 용마산로 299(4층 면목동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 112,
+  "bsshNm": "메쉬커피(Mesh Coffee-24)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 도산대로17길 8(지상1층 101호 신사동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 113,
+  "bsshNm": "메이 베이크",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 서초대로25길 90(지하1층 방배동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 114,
+  "bsshNm": "메이플탑",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 성수이로14길 14(주대명케미칼 나동 2층 성수동2가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 115,
+  "bsshNm": "메클러 커피",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 관악구 봉천로49길 6(1층 봉천동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 116,
+  "bsshNm": "멜리",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 용산구 두텁바위로 137(1층 101호 후암동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 117,
+  "bsshNm": "모르겐글루트(Morgenglut)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 동일로 56(7동 706호 자양동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 118,
+  "bsshNm": "모모코 부엌",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 논현로24길 9(크레이드 1층 도곡동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 119,
+  "bsshNm": "모스가든",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 논현로139길 12(지상1층 논현동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 120,
+  "bsshNm": "모안",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 보문로25길 10(1층 보문동2가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 121,
+  "bsshNm": "모프(mof)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 용산구 두텁바위로1길 36(1,2층 갈월동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 122,
+  "bsshNm": "목목",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 상원10길 3(1층 성수동1가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 123,
+  "bsshNm": "몬탁 방배점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 서초대로25길 54(1층 방배동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 124,
+  "bsshNm": "무이로커피(MUIRO)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 노원구 동일로186길 77-7(1층 우측호 공릉동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 125,
+  "bsshNm": "묵골쌈밥 본점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 새말로15길 22(1층 문정동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 126,
+  "bsshNm": "문전성시",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 구로구 디지털로32길 87(1층 구로동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 127,
+  "bsshNm": "문타로",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 연희맛로 17-49(지하 일부호 연희동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 128,
+  "bsshNm": "뭇로스터리",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 자양로7길 24(1층 자양동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 129,
+  "bsshNm": "뭉치",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 종로구 지봉로 78(미래빌딩 3층 숭인동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 130,
+  "bsshNm": "미뉴엣",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 동대문구 망우로 19(1층 휘경동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 131,
+  "bsshNm": "미니멈올데이",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 관악구 남부순환로153길 56(1층 신림동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 132,
+  "bsshNm": "미미미 신논현",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 강남대로116길 10(5층 논현동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 133,
+  "bsshNm": "밀거래",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 동소문로22길 57-6(동선동2가,지상1층)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 134,
+  "bsshNm": "밀리언 빌리지 커피 바(MILLION VILLAGE COFFEE BAR)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 중랑구 면목로56나길 32(1층 101호 면목동, 라움이너피스)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 135,
+  "bsshNm": "밀앤루",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 강남대로10길 60-1(101호 양재동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 136,
+  "bsshNm": "밉 MIP",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 석촌호수로 272(대림빌딩 1층 송파동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 137,
+  "bsshNm": "밍기적",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 불광천길 274(1층 북가좌동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 138,
+  "bsshNm": "바르세울로나",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 위례성대로12길 5(아이베 1층 방이동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 139,
+  "bsshNm": "바밤바(Bar Bam Bar)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 영등포구 영중로4길 25(영등포동3가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 140,
+  "bsshNm": "바크바",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 노원구 노원로26길 69(오성빌딩 2층 상계동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 141,
+  "bsshNm": "버터럼부티크",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 아차산로76길 28(1,2층 광장동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 142,
+  "bsshNm": "베란다",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 종로구 사직로10길 9-4(1층 내자동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 143,
+  "bsshNm": "베리하운드(BERRY HOUND)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 언주로75길 20(1층 역삼동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 144,
+  "bsshNm": "보마켓 서울숲점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 왕십리로 83-21(디타워동 B113, B114호 성수동1가, 아크로 서울포레스트)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 145,
+  "bsshNm": "본솔커피(연희점)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 증가로 82(1층 연희동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 146,
+  "bsshNm": "봄과여름사이",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 백범로17길 45(1층 대흥동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 147,
+  "bsshNm": "봉맨션",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 가좌로 118(2층 201호 홍은동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 148,
+  "bsshNm": "북가좌 거기",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 명지대길 54(1층 중앙호 남가좌동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 149,
+  "bsshNm": "브라운씨",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강서구 강서로47가길 33(덕산빌딩 1층 104호 내발산동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 150,
+  "bsshNm": "브로벨커피 로스터리",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 테헤란로25길 15-10(지상1층 역삼동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 151,
+  "bsshNm": "비로소 하우스",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 동교로30길 19(4층 동교동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 152,
+  "bsshNm": "비비드(ViVi:D)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 종로구 비봉2길 10(103호 구기동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 153,
+  "bsshNm": "비비컬",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 성미산로 190-21(2층 연남동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 154,
+  "bsshNm": "빌라드블루",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 서울숲2길 46-10(1층 성수동1가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 155,
+  "bsshNm": "빠루(BBARU)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 월드컵로32길 39(1층 좌측호 성산동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 156,
+  "bsshNm": "빵쌤 송파점(BbangSsaem)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 삼학사로 35(1층 삼전동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 157,
+  "bsshNm": "사랑은 초록",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 강남대로2길 70(GP빌딩 1층 양재동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 158,
+  "bsshNm": "사랑호 막회",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 서초대로27길 33(예전빌딩 지하1층 방배동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 159,
+  "bsshNm": "사루",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 중구 동호로12길 53(1층 신당동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 160,
+  "bsshNm": "사직커피",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 종로구 사직로 49-4(1,2층 사직동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 161,
+  "bsshNm": "삼보 수제갈비",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 도봉구 방학로 283(1층 방학동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 162,
+  "bsshNm": "삼삼이네 홍은동점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 홍은중앙로8길 22(2층 홍은동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 163,
+  "bsshNm": "서아진 루프탑 송리단길점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 백제고분로43길 27(5층,옥탑1층 송파동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 164,
+  "bsshNm": "서울안심정육 마곡점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강서구 마곡중앙6로 76-3(인터시티365 지하1층 제비01호,제비02호 마곡동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 165,
+  "bsshNm": "서초커피작업실(Gilmajoong-gil)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 서운로1길 25(1층 서초동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 166,
+  "bsshNm": "서촌다과방",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 종로구 필운대로 6(1층 필운동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 167,
+  "bsshNm": "선유슬로우(sunu.slow)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 영등포구 선유로53길 34-8(양평동4가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 168,
+  "bsshNm": "설곡랩커피로스터스",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 안암로5길 22(청우빌라 1층 안암동4가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 169,
+  "bsshNm": "세러데이즈(Saturdays)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 방배로28길 29-1(지층 방배동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 170,
+  "bsshNm": "소밧(SOVAT)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 독막로22길 28(1층 창전동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 171,
+  "bsshNm": "소서(SOSEO)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 용산구 서빙고로 17(1층 67호 한강로3가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 172,
+  "bsshNm": "송경솥밥",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 성미산로29길 20(1층 연남동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 173,
+  "bsshNm": "송리단양조장",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 백제고분로45길 11(2층 송파동, 렉스프라자)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 174,
+  "bsshNm": "송주불냉면 영등포점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 영등포구 당산로28길 6(행당빌딩 1층 우측호 당산동3가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 175,
+  "bsshNm": "숙이네닭한마리칼국수",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 영등포구 도림로108길 10-1(1층 도림동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 176,
+  "bsshNm": "술인",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 통일로 421(2층 홍제동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 177,
+  "bsshNm": "숩숩(sup sup)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 올림픽로4길 17(아시아선수촌아파트 중심상가 2층 279호 잠실동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 178,
+  "bsshNm": "숲담",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 도봉구 도당로6길 30-6(1층 방학동, 담터캐슬)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 179,
+  "bsshNm": "숲속다락",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 아리랑로5길 92(제301상가동 B104-B호, B104-C호 돈암동, 돈암동 해피트리 아파트)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 180,
+  "bsshNm": "쉘위커피(shall we coffee)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강북구 노해로 90(수유동,쌍문동길 94)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 181,
+  "bsshNm": "스킵(SKIPPP)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 아차산로65길 14(1층 구의동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 182,
+  "bsshNm": "스태픽스(staff picks)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 종로구 사직로9길 22(1층 102호 필운동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 183,
+  "bsshNm": "스테레오커피",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 구의강변로 64(1층 102호 구의동, 구의아크로리버)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 184,
+  "bsshNm": "스테이(sta2)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 동대문구 고산자로 393-6(1층 용두동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 185,
+  "bsshNm": "스톤앤워터(STONE+WATER)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 가락로 283(1층 방이동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 186,
+  "bsshNm": "스틸하우스(STILL HAUS)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 구로구 신도림로11길 14(1층 신도림동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 187,
+  "bsshNm": "스페이스 노들 케이",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 동작구 현충로 11(1층 본동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 188,
+  "bsshNm": "슬레이트 하우스",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 양재천로 125(한국빌딩 1층 양재동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 189,
+  "bsshNm": "슬루센(SLUSSEN)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 화랑로17길 8-15(1~2층 상월곡동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 190,
+  "bsshNm": "시아 아틀리에(sia atelier)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 용산구 서빙고로 35(102동 1층 114호 한강로3가, 용산시티파크1단지)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 191,
+  "bsshNm": "시에로시네마 CieloCinema",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 동대문구 서울시립대로 80-1(전농동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 192,
+  "bsshNm": "시엠프레꼬모도밍고",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 용산구 후암로34길 11(지하1층 B02호 후암동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 193,
+  "bsshNm": "시칠리 블루스(Sicily Blues)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 망원로6길 59(지상 리치빌 1층 101호 망원동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 194,
+  "bsshNm": "심플매터 커피 로스터스 SIMPLE MATTER",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강서구 강서로7길 31(태양빌딩 1층 화곡동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 195,
+  "bsshNm": "싱글벙글",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 종암로14길 12-16(1층 101호 종암동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 196,
+  "bsshNm": "써머레인",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 용산구 이태원로55가길 49(1층 한남동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 197,
+  "bsshNm": "씨케이브(SEA CAVE)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 연희로 89-12(102호 연희동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 198,
+  "bsshNm": "씬(scene)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 동교로51길 117-3(1층 연남동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 199,
+  "bsshNm": "아리",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 강남대로12길 41(103호 양재동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 200,
+  "bsshNm": "아우어루꼴라",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강서구 마곡중앙6로 10(마곡역센트럴푸르지오시티 1, 2층 113, 209호 마곡동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 201,
+  "bsshNm": "아워 베스트 시즌(our best season)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 노원구 노원로38길 76(상가동 302호 상계동, 포레나노원)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 202,
+  "bsshNm": "아일(isle)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 삼선교로11길 34(지상1층 삼선동4가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 203,
+  "bsshNm": "아지브런치",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강북구 4.19로17길 14-1(수유동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 204,
+  "bsshNm": "아키비스트 송파",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 오금로16길 4(지하1,지상1,2층 송파동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 205,
+  "bsshNm": "아키비스트(Archivist)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 종로구 효자로13길 52(1층 효자동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 206,
+  "bsshNm": "알로하터틀",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 양재천로 169(지상1층, 지하1층 도곡동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 207,
+  "bsshNm": "애견동반카페 멍",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 구로구 공원로 40(상가동 1층 106-2호 구로동, 신도림쌍용플래티넘노블)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 208,
+  "bsshNm": "앤드에이",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 토정로11길 54(1층 상수동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 209,
+  "bsshNm": "야미스터피",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 창경궁로35길 83(성북동1가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 210,
+  "bsshNm": "얌얌플레이트",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 구로구 개봉로12길 9-40(1층 개봉동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 211,
+  "bsshNm": "어딕티브",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 주흥길 64-17(1층 102호 반포동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 212,
+  "bsshNm": "어라운드 히어",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 지봉로 181(B1층 보문동2가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 213,
+  "bsshNm": "어로드사이드",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강서구 마곡중앙5로 6(마곡나루역보타닉푸르지오시티 2층 226일부호 마곡동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 214,
+  "bsshNm": "어보블(abovl)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강서구 양천로24길 66(1층 방화동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 215,
+  "bsshNm": "언더바닐라",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 풍성로24길 18(1층 풍납동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 216,
+  "bsshNm": "언톨드(UNTOLD)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강동구 올림픽로60길 14(1층 101호 성내동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 217,
+  "bsshNm": "에놀라 톤",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 관악구 신사로 114(1층 신림동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 218,
+  "bsshNm": "에드 로스트웍스 Ed roastworks",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 토정로 39(1층 합정동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 219,
+  "bsshNm": "에이치비씨(HBC)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 둘레15길 4-1(1층 성수동2가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 220,
+  "bsshNm": "에이치앰퍼샌드",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강동구 고덕로83길 156(라움 1층 고덕동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 221,
+  "bsshNm": "엔바이콘",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 논현로149길 66(지하1,2층 논현동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 222,
+  "bsshNm": "엘마드레",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 성북로8길 14(1층 성북동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 223,
+  "bsshNm": "여름집",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 뚝섬로51길 57(우진빌딩 1층 자양동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 224,
+  "bsshNm": "여의도커피",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 영등포구 여의대방로 386(여의도동, 진주상가2층211,212호)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 225,
+  "bsshNm": "연미정",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 동교로 262-11(Bau Haus 1층 연남동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 226,
+  "bsshNm": "영동포차나",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 언주로148길 14(청호불교문화원 나동 지상2층 208호,209호 논현동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 227,
+  "bsshNm": "예고없이",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 학동로4길 49(지하1층 논현동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 228,
+  "bsshNm": "오'블루",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 노원구 초안산로2길 110(창조교회 1층 좌측1,2호 월계동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 229,
+  "bsshNm": "오드커피하우스(odee coffee house)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 아차산로40길 16(1층 자양동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 230,
+  "bsshNm": "오류동역4번출구 카페",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 구로구 경인로20가길 15(1층 오류동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 231,
+  "bsshNm": "오르노 마포본점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 백범로20길 26(1층,2층 대흥동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 232,
+  "bsshNm": "오르노 목동점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 양천구 목동동로 293(현대41타워 지상3층 302-B호 목동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 233,
+  "bsshNm": "오르노 합정점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 월드컵로3길 14(지1층 B113,114호 합정동, 마포 한강 2차 푸르지오)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 234,
+  "bsshNm": "오르노 합정점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 월드컵로3길 14(지1층 B149,B150,B151, B152,B153,B154호 합정동, 마포 한강 2차 푸르지오)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 235,
+  "bsshNm": "오베뉴 한남",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 용산구 한남대로20길 47-18(1층 한남동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 236,
+  "bsshNm": "오스테리아 오알오",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 능동로 282(1,2층 능동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 237,
+  "bsshNm": "오아시스",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강북구 노해로8가길 34(2층 수유동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 238,
+  "bsshNm": "오아제",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 독서당로 253(1,2층 금호동4가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 239,
+  "bsshNm": "오엠잼(OMJAM)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 성암로13길 66(1층 상암동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 240,
+  "bsshNm": "오터스(otters)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 은평구 연서로 33(역촌동, 1층)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 241,
+  "bsshNm": "옥고집",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 관악구 인헌길 14(5층 봉천동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 242,
+  "bsshNm": "옥상나들이",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 영등포구 문래북로 52(4층 문래동3가, 은진빌딩)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 243,
+  "bsshNm": "온류",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 서울숲2길 14-8(2층 성수동1가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 244,
+  "bsshNm": "올어라운드유(ALL AROUND YOU)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 동작구 사당로 188(사당동,외 3필지지상1층)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 245,
+  "bsshNm": "왕스덕",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 도산대로 130(지하1층 논현동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 246,
+  "bsshNm": "원써드",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 종로구 필운대로 43(태평타운 102호 누하동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 247,
+  "bsshNm": "원일 양념 닭발",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강서구 화곡로58길 22-8(1층 화곡동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 248,
+  "bsshNm": "위 아더 퓨쳐",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 광나루로11길 14(1층 송정동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 249,
+  "bsshNm": "윌리엄커피",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강동구 풍성로 92(성내동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 250,
+  "bsshNm": "유메노조미케이터링",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 선릉로 410(2층 201호 대치동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 251,
+  "bsshNm": "율목커피",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 방배천로8길 26(1층 방배동, 신암빌딩)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 252,
+  "bsshNm": "이알커피(ER coffee)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 증가로4길 58-15(1층 홍은동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 253,
+  "bsshNm": "이이오(eeo)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 백제고분로32길 15(1층 102호 삼전동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 254,
+  "bsshNm": "이지화이트 장위뉴타운점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 돌곶이로40길 46(제상가6동 제1층 제9호 장위동, 꿈의숲 아이파크)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 255,
+  "bsshNm": "이포크",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 중랑구 면목로51길 23(1층 면목동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 256,
+  "bsshNm": "인뚜즈 커피하우스",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 영등포구 영등포로13길 8(1층 양평동1가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 257,
+  "bsshNm": "인투커피-Into coffee",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 관악구 난곡로 331(1층 102,103호 신림동, 신대방노블루체)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 258,
+  "bsshNm": "일과",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 토정로 241(신수동, 1층일부)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 259,
+  "bsshNm": "일상적",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 중랑구 사가정로49길 34(1층 면목동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 260,
+  "bsshNm": "잇웰",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 연희로8길 24(1층 연희동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 261,
+  "bsshNm": "잔디 속에 있다고 상상을 해",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 동작구 상도로 265-30(2층 상도1동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 262,
+  "bsshNm": "전이랑명태랑치킨이랑",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강서구 방화대로21길 67(1층 공항동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 263,
+  "bsshNm": "정남옥 노량진점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 동작구 노량진로 148-5(1층 노량진동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 264,
+  "bsshNm": "조각집",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강서구 방화대로33길 13(1층 좌측호 방화동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 265,
+  "bsshNm": "조효상점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 강남대로8길 39-15(1층 양재동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 266,
+  "bsshNm": "진스바바(JINS_Barba)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 중랑구 중랑천로 64(1층 면목동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 267,
+  "bsshNm": "차고버거(BurgerGarage)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 오금로11길 61-11(101호 방이동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 268,
+  "bsshNm": "차보이(CHA.BOEE)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 도산대로50길 25(지상1층 논현동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 269,
+  "bsshNm": "청춘닭강정",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 노원구 공릉로 114(북측점포 1층 공릉동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 270,
+  "bsshNm": "청춘식당 미래소년",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 나루터로12길 30(미르빌딩 1층 잠원동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 271,
+  "bsshNm": "체리커피",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 능동로 284(1,2층 능동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 272,
+  "bsshNm": "춘천진숯불닭갈비",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 성암로15길 7-1(1,2층 상암동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 273,
+  "bsshNm": "칩멍크",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강북구 삼양로98길 7(1층 수유동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 274,
+  "bsshNm": "칩스",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 금천구 두산로9길 5(101동 101,102호 독산동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 275,
+  "bsshNm": "카페 드 리옹 방배점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 명달로 21(1층, 2층 방배동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 276,
+  "bsshNm": "카페 드뉴(Denu)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 독막로24길 11(1층 일부호 구수동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 277,
+  "bsshNm": "카페 시엘/Cafe Ciel",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 동산로6길 41-14(금강빌딩 1층 102호 양재동, 금강빌딩)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 278,
+  "bsshNm": "카페 ？잔",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 은평구 통일로69길 25(1층 대조동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 279,
+  "bsshNm": "카페노버든",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 영등포구 당산로31길 25(2층 201호 당산동3가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 280,
+  "bsshNm": "카페본작",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 광나루로9길 3(1층 송정동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 281,
+  "bsshNm": "카페이유",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강동구 고덕로 52-18(1층 101,102호 암사동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 282,
+  "bsshNm": "카페이츠",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 자양로18길 45(2층 구의동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 283,
+  "bsshNm": "카페포치(cafe Porch)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 중랑구 공릉로2가길 6(1층 묵동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 284,
+  "bsshNm": "칼리프하우스(Calif house) 문래",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 영등포구 도림로139길 2-2(1층, 옥상층 문래동2가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 285,
+  "bsshNm": "커피,평화",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 희우정로 53-1(1층 102호 합정동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 286,
+  "bsshNm": "커피스토어(COFFEE.STORE)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 안암로5길 72(백남빌딩 지상1층 103,104호 안암동3가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 287,
+  "bsshNm": "커피엣마켓 독립문영천시장",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 통일로 173-2(1층 천연동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 288,
+  "bsshNm": "컴 폴 커피(come for coffee)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강북구 덕릉로 130(1층 번동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 289,
+  "bsshNm": "컴인(COME In)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 이화여대길 88-19(2층 대현동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 290,
+  "bsshNm": "케익바(Cakebar)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 서울숲4길 18-7(지1층 성수동1가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 291,
+  "bsshNm": "코니스(CONIS)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 성미산로15길 16-3(1층 연남동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 292,
+  "bsshNm": "코모레비",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강서구 마곡서로 101(동익드미라벨복합빌딩 1층 152호 마곡동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 293,
+  "bsshNm": "코시아 커피(COSIA COFFEE)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 중구 다산로16길 38(1층 신당동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 294,
+  "bsshNm": "코엔(Koen) 간데메 공원",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 동대문구 서울시립대로4길 35(1층 답십리동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 295,
+  "bsshNm": "쿄우커피",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 동대문구 천호대로83길 22(1층 장안동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 296,
+  "bsshNm": "쿡히앤컵히",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 학동로3길 49(지하1층 논현동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 297,
+  "bsshNm": "큐큐큐큐(QQQQ)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 오금로20길 4(1층 103호 송파동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 298,
+  "bsshNm": "크레스타운 압구정점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 압구정로46길 5-2(원일 지상1층 신사동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 299,
+  "bsshNm": "크렘캉캉",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 관악구 신림로 274-3(1층 신림동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 300,
+  "bsshNm": "크림베이글",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 아차산로76길 34(1층 광장동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 301,
+  "bsshNm": "크림베이글 잠실점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 송파대로 473(1층 101호 석촌동, 양지473)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 302,
+  "bsshNm": "크림빔(Cream Beam)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강서구 강서로15길 119(1층 화곡동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 303,
+  "bsshNm": "킹브로",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 희우정로10길 29(1층 망원동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 304,
+  "bsshNm": "타프나드",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 만리재로 90(블레스하임 3차 지1층 101호 공덕동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 305,
+  "bsshNm": "토닥 더치킨샵",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 영등포구 양평로22바길 4-1(1층 양평동5가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 306,
+  "bsshNm": "투 리틀 베이커스(two little bakers)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 용산구 서빙고로 17(용산센트럴파크 해링텅스퀘어 1층 141호 한강로3가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 307,
+  "bsshNm": "투뿔205",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 금천구 디지털로9길 99(115,117,118호 가산동, 스타밸리)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 308,
+  "bsshNm": "투치치",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 관악구 관악로14길 30(1층 봉천동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 309,
+  "bsshNm": "트라이브 커피(TR!BE COFFEE)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 면목로 25(비아트리체빌딩 101호 군자동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 310,
+  "bsshNm": "트래키(TRAKII)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 강남대로42길 23(1층 101호 도곡동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 311,
+  "bsshNm": "트램 서울(Trem Seoul)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 관악구 남부순환로226길 23-10(1층 101호 봉천동, 황금빌)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 312,
+  "bsshNm": "티틸",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강북구 노해로 42(2층 수유동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 313,
+  "bsshNm": "티핑포인트(Tipping point)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 용산구 이태원로 217(현대안성타워 1층 101호 한남동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 314,
+  "bsshNm": "틱택 커피(tick-tack coffee)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 동작구 대림로 16(1층 신대방동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 315,
+  "bsshNm": "파도",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 증가로32안길 31-9(1층 북가좌동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 316,
+  "bsshNm": "파를린베리스PARLINBERIS",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 자양로 319(1층 101호 구의동, 한가온 빌)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 317,
+  "bsshNm": "파인커피(Fine coffee)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 구로구 개봉로12길 33(1층 개봉동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 318,
+  "bsshNm": "팔월(八月)잔칫날",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 아차산로76길 5(1층 광장동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 319,
+  "bsshNm": "팜스프링스",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 영등포구 도신로60길 22-3(신길동, 1층, 2층)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 320,
+  "bsshNm": "팜폼",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 효창목길 18(1층 공덕동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 321,
+  "bsshNm": "퍼그피자하우스 신림점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 관악구 신림로 363(지상 1~3층 신림동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 322,
+  "bsshNm": "펠른(perlen)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 서울숲2길 6(1층 성수동1가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 323,
+  "bsshNm": "펫터니아 하우스",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 고려대로1길 69(파운드잇 1층 삼선동5가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 324,
+  "bsshNm": "포르르",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 능동로 137-1(2층,3층, 옥탑층 화양동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 325,
+  "bsshNm": "포차 몽",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 구로구 공원로8길 45(지하1층 구로동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 326,
+  "bsshNm": "푸르토아(pour toi)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 금천구 독산로54길 41(지하 1층 독산동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 327,
+  "bsshNm": "푸쉬커피",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 자양로45길 24-3(1층 구의동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 328,
+  "bsshNm": "프레오",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 토정로 254(1층 용강동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 329,
+  "bsshNm": "프로젝트 파이",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 성북로 82(1층 성북동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 330,
+  "bsshNm": "플루이드(FLUID)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강서구 공항대로65길 82(1층 염창동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 331,
+  "bsshNm": "피자사만다 강남구청점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 선릉로125길 5-6(1층 논현동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 332,
+  "bsshNm": "피자익스프레스",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 압구정로10길 28(지하1층 신사동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 333,
+  "bsshNm": "피크닉마나올라나",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 성미산로 153-16(1층 연남동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 334,
+  "bsshNm": "피테커 피자",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 은평구 은평로13길 14(1층 녹번동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 335,
+  "bsshNm": "픽어툴",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 성북로5길 6(1층 성북동1가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 336,
+  "bsshNm": "픽픽(pick pick)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 용산구 후암로 18(1,2층 후암동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 337,
+  "bsshNm": "필리커피",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 월드컵로25길 26(101동 1-021,022호 망원동, 마포영화블렌하임)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 338,
+  "bsshNm": "필앳홈스테이크하우스 잠실점",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 백제고분로41길 6-5(연빌딩 1층 송파동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 339,
+  "bsshNm": "하이어그라운드",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 동대문구 천호대로91길 57(1층 101호 장안동, 캔자스대저택)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 340,
+  "bsshNm": "하이커피",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 도곡로21길 15(상가동 1층 3호 역삼동, 역삼동월드메르디앙아파트)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 341,
+  "bsshNm": "하츠헤븐",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 희우정로 128(1층 101호 망원동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 342,
+  "bsshNm": "해임시(haeimsi)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강동구 천호대로157길 26(4층 천호동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 343,
+  "bsshNm": "해피페페(HAPPY FEFE)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 동작구 성대로 87(지상1층 101호 상도동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 344,
+  "bsshNm": "행복하개 키울고양",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 고려대로11길 24(3층 안암동2가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 345,
+  "bsshNm": "헤리티지 클럽",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 종로구 서순라길 75-2(1층 봉익동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 346,
+  "bsshNm": "헤리티지 클럽 1",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 종로구 서순라길 75(봉익동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 347,
+  "bsshNm": "헤이더그린",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강서구 대장로 58(1층 오쇠동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 348,
+  "bsshNm": "헤이림",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 동대문구 고산자로 391(1층 용두동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 349,
+  "bsshNm": "헨릭",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 송정4길 10(1층 송정동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 350,
+  "bsshNm": "헬카페 로스터즈",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 독막로 281(마포 한국빌딩 별관 1층 염리동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 351,
+  "bsshNm": "호미커피",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 서초대로42길 82(1층 서초동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 352,
+  "bsshNm": "호미커피 HOMI COFFEE",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 위례광장로 136(상가 4동 D-115호 장지동, 위례아이파크)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 353,
+  "bsshNm": "호미커피(HOMIE COFFEE)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 중구 청파로 463-25(1층 중림동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 354,
+  "bsshNm": "호이 폴로이 커피 로스터스(HOI POLLOI COFFEE ROASTERS)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 노원구 동일로186길 64(좌측 1층 공릉동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 355,
+  "bsshNm": "호재네",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 올림픽로 607(2층 풍납동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 356,
+  "bsshNm": "홀리버거(HOLY BURGER)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 능동로 323(1층 중곡동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 357,
+  "bsshNm": "홈숍집 앤",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 응암로 116-5(북가좌지오B동 B동 1층 북가좌동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 358,
+  "bsshNm": "홍댕",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 와우산로19길 19(4층 서교동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 359,
+  "bsshNm": "후룹로스터스",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강서구 마곡중앙6로 45(리더스퀘어마곡 1층 118호 마곡동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 360,
+  "bsshNm": "후후라운지",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 관악구 호암로26가길 8(샘물교회 1층 신림동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 361,
+  "bsshNm": "희희잇",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강서구 마곡중앙4로 22(파인스퀘어 A동 117호 마곡동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 362,
+  "bsshNm": "히소히소(HisoHiso)",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강서구 마곡서로 175(407동 상가B103호 마곡동, 마곡엠밸리4단지)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 363,
+  "bsshNm": "히크 엣 눙크",
+  "indutyNm": "일반음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 반포대로9길 79(1층 서초동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 364,
+  "bsshNm": "An coffee 안커피",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 구로구 고척로22길 74(1층 개봉동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 365,
+  "bsshNm": "INNER PEACE(이너피스)",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강서구 양천로66길 6(생활편익시설동 1층 105호 등촌동, 삼성한사랑1차아파트)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 366,
+  "bsshNm": "POPO archive(포포 아카이브)",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 관악구 신림로36길 10(자성원 제1층 신림동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 367,
+  "bsshNm": "cafe ACC",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 관악구 호암로20길 17(위룸원 신림동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 368,
+  "bsshNm": "고몽순 커피",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 신촌로29길 16(1층 북아현동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 369,
+  "bsshNm": "고양이가밟은쿠키",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 영등포구 양평로21가길 6(1층 양평동5가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 370,
+  "bsshNm": "굿띵(Good Thing)",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 영화사로 51(제1동 제1층 101호 중곡동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 371,
+  "bsshNm": "굿모닝 거트 클럽(GMGC/Good Morning Gut Club)",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 홍제천로 96(1층 연희동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 372,
+  "bsshNm": "그레이 펭귄 커피",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 서울숲4길 26-14(1층 성수동1가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 373,
+  "bsshNm": "까사드선주",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 홍제천로6길 40(1층 좌측호 연희동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 374,
+  "bsshNm": "깔롱",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 독막로 237(1층 신수동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 375,
+  "bsshNm": "꼬늘커피",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 중랑구 동일로114길 38(1층 상봉동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 376,
+  "bsshNm": "꼬모윤(comoyoon)",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 종로구 계동길 57(2층 계동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 377,
+  "bsshNm": "꽁냥꽁냥",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 노원구 동일로 1058(2층 공릉동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 378,
+  "bsshNm": "낫트 NATT",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 희우정로12길 11(1층 101호 2호 망원동, 샬롬하우스)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 379,
+  "bsshNm": "뉘앙스 서울(nuance Seoul)",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 중구 다산로38길 13(1층 신당동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 380,
+  "bsshNm": "더블보드카페",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 중랑구 용마산로 248(3층 301호 면목동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 381,
+  "bsshNm": "덕(DUCK)",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 서래로6길 10(반포4동근린빌딩 1층 반포동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 382,
+  "bsshNm": "독스아일랜드 논현",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 학동로33길 24(지하1층 논현동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 383,
+  "bsshNm": "디어피피 펫푸드 앤 카페",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 영등포구 도신로15다길 1(1층 102호 도림동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 384,
+  "bsshNm": "라온다",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 은평구 증산로19길 8(1층 신사동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 385,
+  "bsshNm": "로커피",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 양천구 남부순환로59길 16(1층 신월동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 386,
+  "bsshNm": "룸프(LOOMP)",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 백제고분로41길 25(1층 102호 송파동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 387,
+  "bsshNm": "르쿠에르",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 고려대로6길 74(지상1층 101호 보문동4가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 388,
+  "bsshNm": "리모리",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 연희로11길 51(지하1층 연희동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 389,
+  "bsshNm": "리브릭(Libreak)",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 뚝섬로15길 29(1층 성수동2가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 390,
+  "bsshNm": "마시쓰(massiss)",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강동구 천호대로151길 31(1층 천호동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 391,
+  "bsshNm": "맘마앤독",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 선릉로125길 10(지상1층 논현동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 392,
+  "bsshNm": "메이베이크",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 왕십리로31길 6(2층 하왕십리동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 393,
+  "bsshNm": "몬슈",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 은평구 연서로 302(1층 우측호 불광동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 394,
+  "bsshNm": "무무무",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강서구 강서로47길 60(1층 101호 내발산동, 코이노니아 스테이)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 395,
+  "bsshNm": "바빌(Babil)",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강동구 양재대로125길 47(1층 천호동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 396,
+  "bsshNm": "반느커피",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 구로구 고척로20길 70-4(1층 개봉동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 397,
+  "bsshNm": "발디 Waldi",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 동소문로 64(1층 동소문동3가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 398,
+  "bsshNm": "밤앤송 카페",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 금천구 시흥대로153길 72(1층 일부호 가산동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 399,
+  "bsshNm": "배추공주와페키들의감성놀이터",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 홍연길 87(1층 연희동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 400,
+  "bsshNm": "버터온",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강동구 천중로 39(1층 4호 천호동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 401,
+  "bsshNm": "베이비 피그 Baby Pig",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 동대문구 전농로 233(3층 전농동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 402,
+  "bsshNm": "부트 카페 서울",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 종로구 자하문로 46(창성동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 403,
+  "bsshNm": "브라우닝 커피(Browning coffee)",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 백범로 152(201동 1층 9호 공덕동, 공덕파크자이)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 404,
+  "bsshNm": "브루마이마인",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 광성로 20(지층 104호 신수동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 405,
+  "bsshNm": "브루잉이펙트",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 청룡마을길 17-4(신원동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 406,
+  "bsshNm": "블랙시드 선유도",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 영등포구 양평로22사길 5(1층 양평동5가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 407,
+  "bsshNm": "비비비(Bite By Bite)",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 긴고랑로14길 59(1층 중곡동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 408,
+  "bsshNm": "비엔드(B&D)",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 관악구 은천로 177(1층 102호 봉천동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 409,
+  "bsshNm": "빈트웰브(Beantwelve)",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 연희맛로 7-25(2층 연희동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 410,
+  "bsshNm": "산예",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 동교로46길 28(1층 연남동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 411,
+  "bsshNm": "삼이일공 커피공장",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 양재천로11길 11(양재동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 412,
+  "bsshNm": "세븐일레븐 금천에이스점",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 금천구 가산디지털1로 30(에이스하이엔드타워10 1층 103호 가산동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 413,
+  "bsshNm": "소림커피 로그원점",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 잔다리로7안길 4(1층 서교동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 414,
+  "bsshNm": "수키",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 월드컵로25길 7(1층 좌측호 망원동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 415,
+  "bsshNm": "시월에 토리",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 중랑구 용마산로 670(A동 104호 망우동, 신내역 프라디움 더 테라스)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 416,
+  "bsshNm": "아키비스트 한남",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 용산구 한남대로42길 41(1층 101호 한남동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 417,
+  "bsshNm": "어피럽",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강동구 성안로 25(1층 성내동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 418,
+  "bsshNm": "에그밀",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 포은로 146(명현빌딩 1층 101-1호 망원동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 419,
+  "bsshNm": "엔트런스",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 사임당로19길 72-3(지층 서초동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 420,
+  "bsshNm": "예스리 토스트",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 거북골로 6(홍은동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 421,
+  "bsshNm": "오카페(O'Cafe)",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 도봉구 도봉로145길 78(1층 방학동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 422,
+  "bsshNm": "오티오커피(OTO coffee)",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 용산구 임정로 59-1(1층 효창동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 423,
+  "bsshNm": "오프투커피",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 구로구 개봉로16길 9(1층 개봉동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 424,
+  "bsshNm": "원더월커피로스터스",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 동대문구 답십리로 80(1층 답십리동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 425,
+  "bsshNm": "원바이트(OneBite)",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 도봉구 방학로3길 12(1층 방학동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 426,
+  "bsshNm": "위아커피컴퍼니",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 아차산로78길 44(크레스코빌딩 제지하1층 제5호 광장동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 427,
+  "bsshNm": "유아마이젤라또(You are my gelato)",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 영등포구 도림로 425(1층 문래동2가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 428,
+  "bsshNm": "이나 더 베어(inah the bear)",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 영등포구 선유서로24길 25-1(1층 양평동1가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 429,
+  "bsshNm": "일도커피",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강서구 강서로 210(상광빌딩 1층 화곡동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 430,
+  "bsshNm": "저스트시즌(just season)",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 도봉구 도봉로110다길 26(1층 101호 창동, 현대빌리지)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 431,
+  "bsshNm": "정우 티하우스",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 동작구 동작대로9가길 18-1(1층 사당동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 432,
+  "bsshNm": "주식회사 하프파운드",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 백제고분로33길 10(2층 석촌동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 433,
+  "bsshNm": "츄로스커피&아이스크림",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 뚝섬로 620(1층 자양동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 434,
+  "bsshNm": "카페 암스테르담",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 학동로31길 13(청양해운빌딩 지상1층 논현동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 435,
+  "bsshNm": "카페 일다경",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 삼학사로18길 3-27(1층 101호 석촌동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 436,
+  "bsshNm": "카페29",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 환일길 29(지하1층 1호 아현동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 437,
+  "bsshNm": "카페그린그린 cafe greengreen",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 양재천로 73(1층 양재동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 438,
+  "bsshNm": "카페라",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 송정18가길 9(송정동 공공복합청사 1층 송정동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 439,
+  "bsshNm": "카페리브레",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 성미산로32길 20-5(1,2층 연남동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 440,
+  "bsshNm": "카페소소",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강동구 양재대로 1300(스테이션9동 1층 124호 둔촌동, 올림픽파크포레온)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 441,
+  "bsshNm": "커스텀커피 마곡나루점",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강서구 마곡서로 170(마곡시티오피스텔 1층 105호 마곡동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 442,
+  "bsshNm": "커피 스피릿",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 노원구 공릉로37길 13(1층 공릉동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 443,
+  "bsshNm": "커피가게 동경(연희점)",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 연희맛로 23(사러가쇼핑 1층 7호 연희동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 444,
+  "bsshNm": "커피인류 개포점",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 영동대로 22(830동 지하1층 S5B1-0511호 일원동, 디에이치 자이 개포)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 445,
+  "bsshNm": "컴포즈커피 공덕오거리점",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 새창로 14(1층 오른쪽 끝매장호 도화동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 446,
+  "bsshNm": "케뚜",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 연희로11나길 5(지층 일부호 연희동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 447,
+  "bsshNm": "콘파타테",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 관악구 관악로12길 72(지층 1호 봉천동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 448,
+  "bsshNm": "타이즈커피(TIES COFFEE)",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강동구 풍성로 99(1층 성내동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 449,
+  "bsshNm": "티거래빗커피",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 긴고랑로36길 46(1층 중곡동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 450,
+  "bsshNm": "티소트",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강서구 강서로12길 15(양지빌딩 1층 우측호 화곡동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 451,
+  "bsshNm": "파딜라 베이크 숍(padilla bake shop)",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 증가로 49-1(1층 연희동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 452,
+  "bsshNm": "패치스 워크 클럽",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 종로구 지봉로8길 5(101호 숭인동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 453,
+  "bsshNm": "페이머스베이커리",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 구로구 경인로19길 48-8(나동 1층 오류동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 454,
+  "bsshNm": "펫타리움 청담점",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 영동대로 725(지상6층 청담동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 455,
+  "bsshNm": "평화의 나라",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 은평구 가좌로 272(1층 신사동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 456,
+  "bsshNm": "포엣룸",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 영등포구 도림로141가길 4(1층 문래동4가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 457,
+  "bsshNm": "플로렛",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 양재천로 185(1층 도곡동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 458,
+  "bsshNm": "피망룸(P.mang room)",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 희우정로20길 54(2층 망원동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 459,
+  "bsshNm": "하우스 라로바",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강북구 인수봉로 310(1층 우측호 수유동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 460,
+  "bsshNm": "하프커피 익스프레스 퍼블릭가산점",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 금천구 디지털로 178(M-B116호 가산동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 461,
+  "bsshNm": "해로커피",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 성북로 19-3(1층 성북동1가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 462,
+  "bsshNm": "헤렌디커피 주식회사",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 금호로 140(상가에이동 지1층 B108호 금호동1가, 이편한세상금호파크힐스)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 463,
+  "bsshNm": "헤머스미스 커피",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 강남구 봉은사로26길 25(1층 역삼동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 464,
+  "bsshNm": "헤비로테이트",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 영등포구 도신로19길 22(1층 도림동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 465,
+  "bsshNm": "？커피,MOCC",
+  "indutyNm": "휴게음식점",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 관악구 미성길 7(1층 신림동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 466,
+  "bsshNm": "로핀(Loafin')",
+  "indutyNm": "제과점영업",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 월드컵로10길 17(1층 서교동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 467,
+  "bsshNm": "몬슈",
+  "indutyNm": "제과점영업",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 은평구 연서로 302(1층 우측호 불광동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 468,
+  "bsshNm": "보카타 마사마드레",
+  "indutyNm": "제과점영업",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 종로구 자하문로7길 68-3(지하1층 누하동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 469,
+  "bsshNm": "소서",
+  "indutyNm": "제과점영업",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 용산구 서빙고로 17(1층 67호 한강로3가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 470,
+  "bsshNm": "소피 SOffee",
+  "indutyNm": "제과점영업",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 망원로 49-1(2층 망원동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 471,
+  "bsshNm": "스위트모먼트",
+  "indutyNm": "제과점영업",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서대문구 연희로15길 83-8(지하1층 B101호 연희동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 472,
+  "bsshNm": "아워아워(OUR HOUR)",
+  "indutyNm": "제과점영업",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 서초대로54길 46(101호 서초동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 473,
+  "bsshNm": "아일 베이커리",
+  "indutyNm": "제과점영업",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 삼선교로11길 34(1층 삼선동4가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 474,
+  "bsshNm": "예티 커피 하우스",
+  "indutyNm": "제과점영업",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 구로구 개봉로16길 3(개봉동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 475,
+  "bsshNm": "온뒤",
+  "indutyNm": "제과점영업",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 연남로3길 13(1층 102호 연남동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 476,
+  "bsshNm": "유가루 하우스",
+  "indutyNm": "제과점영업",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 노원구 동일로190길 53-5(지하1층 공릉동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 477,
+  "bsshNm": "은근한방앗간",
+  "indutyNm": "제과점영업",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 자양로45길 16(1층 구의동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 478,
+  "bsshNm": "주식회사 하프파운드",
+  "indutyNm": "제과점영업",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 백제고분로33길 10(2층 석촌동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 479,
+  "bsshNm": "천상가옥",
+  "indutyNm": "제과점영업",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성동구 성수이로14길 14(주대명케미칼 나동 2,3층 성수동2가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 480,
+  "bsshNm": "코보",
+  "indutyNm": "제과점영업",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 안암로5길 52(1층 안암동4가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 481,
+  "bsshNm": "콰상",
+  "indutyNm": "제과점영업",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 광진구 자양번영로3길 7(1층 자양동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 482,
+  "bsshNm": "퀸즈베리도넛하우스 방배점",
+  "indutyNm": "제과점영업",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 서초구 방배로19길 63(2층 방배동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 483,
+  "bsshNm": "필리(Philly)",
+  "indutyNm": "제과점영업",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 성북구 안암로 89-5(1층 안암동5가)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 484,
+  "bsshNm": "허그허그러브",
+  "indutyNm": "제과점영업",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 동교로51길 111(2층 연남동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 485,
+  "bsshNm": "화르르",
+  "indutyNm": "제과점영업",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 송파구 백제고분로32길 20(1층 삼전동)",
+  "searchLgaldngNm": null
+ },
+ {
+  "rnum": 486,
+  "bsshNm": "휘낭드 (finande)",
+  "indutyNm": "제과점영업",
+  "lgaldngNm": "서울",
+  "siteAddr": "서울특별시 마포구 망원로6길 37(1층 좌측호 망원동)",
+  "searchLgaldngNm": null
+ }
+]
