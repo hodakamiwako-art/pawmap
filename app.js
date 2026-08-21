@@ -33,7 +33,7 @@ const isDark = () => document.documentElement.dataset.theme === 'dark' ||
 function setBasemap() {
   const url = isDark() ? TILE.dark : TILE.light;
   if (tiles) { tiles.setUrl(url); return; }
-  tiles = L.tileLayer(url, { attribution: ATTR, subdomains: 'abcd', maxZoom: 20, minZoom: 10 }).addTo(map);
+  tiles = L.tileLayer(url, { attribution: ATTR, subdomains: 'abcd', maxZoom: 20, minZoom: 6 }).addTo(map);
 }
 darkQ.addEventListener('change', setBasemap);
 
@@ -63,7 +63,7 @@ async function init() {
   Store.onauth = renderAccount;
   Store.initAuth();
 
-  map = L.map('map', { center: SEOUL, zoom: 12, zoomControl: false });
+  map = L.map('map', { center: SEOUL, zoom: 12, zoomControl: false, minZoom: 6, maxZoom: 20 });
   L.control.zoom({ position: 'topright' }).addTo(map);
   setBasemap();
   subLayer = L.layerGroup();
@@ -188,6 +188,7 @@ function applyLang() {
   $('t-lmine').textContent = t.legend_mine;
   $('t-lvet').textContent = t.legend_vet;
   $('t-lshop').textContent = t.legend_shop;
+  $('zoomhint').textContent = t.zoom_hint;
   $('locate').title = t.locate;
   $('fitall').title = t.fitall;
   $('addpin').title = t.addpin;
@@ -376,18 +377,35 @@ function render() {
   updateMarkersInView();
 }
 
-/* 画面内（少し余裕をとる）にあるものだけを地図に載せる */
+/* 画面内（少し余裕をとる）にあるものだけを地図に載せる。
+   全国を一望したときは数千個になるので、上限を超えたら間引く。 */
+const MARKER_CAP = 800;
+
 function updateMarkersInView() {
   if (!map) return;
   const b = map.getBounds().pad(0.25);
-  const put = (id, m, wanted) => {
-    const on = wanted && b.contains(m.getLatLng());
+  const cand = [];
+  const sweep = (store, wanted) => {
+    for (const [id, m] of store) {
+      if (wanted.has(id) && b.contains(m.getLatLng())) cand.push(m);
+      else if (map.hasLayer(m)) map.removeLayer(m);
+    }
+  };
+  sweep(markers, visIds);
+  sweep(poiMarkers, visPoiIds);
+  sweep(petMarkers, visPetIds);
+
+  const capped = cand.length > MARKER_CAP;
+  const step = capped ? cand.length / MARKER_CAP : 1;
+  const keep = new Set();
+  for (let i = 0; i < cand.length; i += step) keep.add(cand[Math.floor(i)]);
+  for (const m of cand) {
+    const on = !capped || keep.has(m);
     if (on && !map.hasLayer(m)) m.addTo(map);
     else if (!on && map.hasLayer(m)) map.removeLayer(m);
-  };
-  for (const [id, m] of markers)    put(id, m, visIds.has(id));
-  for (const [id, m] of poiMarkers) put(id, m, visPoiIds.has(id));
-  for (const [id, m] of petMarkers) put(id, m, visPetIds.has(id));
+  }
+  const hint = $('zoomhint');
+  if (hint) hint.hidden = !capped;
 }
 
 function placeCard(p) {
@@ -886,5 +904,5 @@ $('install').onclick = async () => {
   $('install').classList.remove('show');
 };
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+  window.addEventListener('load', () => navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).catch(() => {}));
 }
