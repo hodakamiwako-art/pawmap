@@ -1,0 +1,23 @@
+{
+  "favs": [],
+  "pois": [
+    {
+      "note": "",
+      "deleted": false,
+      "id": "7004b8e7-a2ec-4e21-a26f-49df8e7799b4",
+      "name": "Aloft by Marriott Seoul Gangnam",
+      "lat": 37.52378411112235,
+      "lng": 127.05559730529787,
+      "updated_at": "2026-08-21T16:10:20.291Z"
+    },
+    {
+      "note": "",
+      "deleted": false,
+      "id": "45f76ecf-78d4-44bc-a870-d04e010b6745",
+      "name": "바우라움 Bauraum (Dog Hotel)",
+      "lat": 37.51574262934767,
+      "lng": 127.03342080116273,
+      "updated_at": "2026-08-21T16:12:30.426Z"
+    }
+  ]
+}

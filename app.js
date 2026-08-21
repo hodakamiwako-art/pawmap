@@ -5,6 +5,7 @@ const $ = id => document.getElementById(id);
 const SEOUL = [37.5512, 126.9882];
 
 const ICON_PAW = '<svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><ellipse cx="6.5" cy="9" rx="2.6" ry="3.4"/><ellipse cx="12" cy="6.6" rx="2.7" ry="3.6"/><ellipse cx="17.5" cy="9" rx="2.6" ry="3.4"/><path d="M12 12.4c3.4 0 6 2.5 6 5 0 1.7-1.4 2.9-3.2 2.9-1.1 0-1.9-.5-2.8-.5s-1.7.5-2.8.5C7.4 20.3 6 19.1 6 17.4c0-2.5 2.6-5 6-5z"/></svg>';
+const ICON_IG = '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>';
 const ICON_SUN = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M3 13h18M12 13V4M12 4c-4 0-7.4 3.6-9 9M12 4c4 0 7.4 3.6 9 9M12 13v6a2 2 0 0 0 4 0"/></svg>';
 
 let lang = detectLang();
@@ -260,8 +261,9 @@ function match(p) {
   if (st.ter && !p.terrace) return false;
   if (st.favonly && !Store.isFav(p.id)) return false;
   if (st.q) {
+    const stn = p.station ? p.station.ja + p.station.en + p.station.ko : '';
     const h = (p.ko + p.ja + p.en + p.genre.ja + p.genre.en + p.detail.ja + p.detail.en +
-               p.area.ja + p.area.en + p.area.ko + p.gu.ja + p.gu.en + p.cat_ko + p.addr).toLowerCase();
+               p.area.ja + p.area.en + p.area.ko + p.gu.ja + p.gu.en + p.cat_ko + p.addr + stn).toLowerCase();
     if (!h.includes(st.q.toLowerCase())) return false;
   }
   return true;
@@ -332,13 +334,17 @@ function placeCard(p) {
     `<span class="nm"></span><span class="ko"></span>` +
     `<span class="meta"><span class="tag ${p.kind === 'cafe' ? 'g' : 'o'}"></span>` +
     `${p.terrace ? `<span class="tag o">${t.terrace_yes}</span>` : ''}` +
-    `<span class="ar"></span></span>` +
+    `<span class="ar"></span>` +
+    `${p.station ? '<span class="stn-tag"></span>' : ''}` +
+    `${p.insta ? '<span class="ig-tag">IG</span>' : ''}</span>` +
     `<span class="aside">${Store.isFav(p.id) ? '<span class="fav">★</span>' : ''}` +
     `${st.here ? '<span class="dist"></span>' : ''}</span>`;
   b.querySelector('.nm').textContent = p[lang] || p.ko;
   b.querySelector('.ko').textContent = p.ko;
   b.querySelector('.tag').textContent = p.genre[lang];
   b.querySelector('.ar').textContent = p.area[lang] || p.area.ko;
+  const stn = b.querySelector('.stn-tag');
+  if (stn) stn.textContent = t.station_short(p.station[lang] || p.station.ko, p.station.m);
   const d = b.querySelector('.dist');
   if (d) d.textContent = fmtDist(distance(st.here[0], st.here[1], p.lat, p.lng));
   b.onclick = () => select(p.id, 'place', true);
@@ -406,7 +412,9 @@ function placeDetail(p) {
     <dl class="dl">
       <dt>${t.d_genre}</dt><dd>${esc(p.genre[lang])}</dd>
       ${p.detail[lang] ? `<dt>${t.d_detail}</dt><dd>${esc(p.detail[lang])}</dd>` : ''}
+      ${p.station ? `<dt>${t.d_station}</dt><dd>${esc(t.station_short(p.station[lang] || p.station.ko, p.station.m))}</dd>` : ''}
       <dt>${t.d_addr}</dt><dd class="addr">${esc(p.addr)}${p.prec !== 'shop' ? `<br><small>${t.approx}</small>` : ''}</dd>
+      ${p.tel ? `<dt>${t.d_tel}</dt><dd><a href="tel:${esc(p.tel.replace(/[^0-9+]/g, ''))}">${esc(p.tel)}</a></dd>` : ''}
       <dt>${t.d_rating}</dt><dd class="stars">${p.rating ? `★ ${p.rating} / 5　${esc(t.d_reviews(p.reviews))}` : '—'}</dd>
       <dt>${t.d_licence}</dt><dd>${esc(p.induty[lang])}</dd>
     </dl>
@@ -418,7 +426,10 @@ function placeDetail(p) {
     <div class="links">
       <a class="primary" href="${p.gmap}" target="_blank" rel="noopener">${t.link_g}<span class="arr">↗</span></a>
       <a href="${p.naver}" target="_blank" rel="noopener">${t.link_n}<span class="arr">↗</span></a>
+      ${p.insta ? `<a class="ig" href="${esc(p.insta)}" target="_blank" rel="noopener">${ICON_IG}${t.link_ig}<span class="arr">↗</span></a>` : ''}
+      ${p.web ? `<a href="${esc(p.web)}" target="_blank" rel="noopener">${t.link_web}<span class="arr">↗</span></a>` : ''}
       ${p.dc ? `<a href="${p.dc}" target="_blank" rel="noopener">${t.link_d}<span class="arr">↗</span></a>` : ''}
+      ${p.tel ? `<a href="tel:${esc(p.tel.replace(/[^0-9+]/g, ''))}">${t.link_tel}<span class="arr">↗</span></a>` : ''}
     </div>
     <div class="foot">${t.foot}</div>`;
 }

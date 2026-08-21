@@ -1,11 +1,33 @@
 # -*- coding: utf-8 -*-
-import json, re, urllib.parse
+import json, re, math, os, urllib.parse
 import translit as T
 import lexicon as L
 from ja import JA          # 手書きした100軒の日本語名・ジャンル・エリア
 
 E   = json.load(open('enriched2.json',   encoding='utf-8'))
 GEO = json.load(open('geo_fallback.json',encoding='utf-8'))
+KAK = json.load(open('kakao.json',       encoding='utf-8')) if os.path.exists('kakao.json') else {}
+SUB = json.load(open('../data/subway.json', encoding='utf-8')) if os.path.exists('../data/subway.json') else {'stations': []}
+STATIONS = [s for s in SUB['stations'] if s.get('sub')] or SUB['stations']
+
+
+def metres(a, b, c, d):
+    R = 6371000.0; k = math.pi / 180
+    dla = (c - a) * k; dlo = (d - b) * k
+    x = math.sin(dla / 2) ** 2 + math.cos(a * k) * math.cos(c * k) * math.sin(dlo / 2) ** 2
+    return 2 * R * math.asin(math.sqrt(x))
+
+
+def nearest_station(lat, lng):
+    best, bd = None, 1e9
+    for s in STATIONS:
+        d = metres(lat, lng, s['lat'], s['lng'])
+        if d < bd:
+            best, bd = s, d
+    if not best or bd > 1500:
+        return None
+    return {'ko': best['ko'], 'ja': best['ja'] or best['ko'],
+            'en': best['en'] or best['ko'], 'm': int(round(bd / 10) * 10)}
 
 LATIN = re.compile(r'^[A-Za-z0-9 .,&\'\-!?/()]+$')
 HANGUL = re.compile(r'[가-힣]')
@@ -146,7 +168,9 @@ for key, v in E.items():
         dj = hand[2] or dj
         # 手書きの漢字表記は活かしつつ、読みはハングルから作り直して揃える
         area_ko = hand[4]
-        kanji = re.sub(r'（.*', '', hand[3]).strip()
+        head = re.sub(r'（.*', '', hand[3]).strip()
+        # 漢字表記があるときだけ併記する（カタカナの重複を避ける）
+        kanji = head if re.search(r'[一-鿿]', head) else ''
         reading = T.katakana(area_ko) if HANGUL.search(area_ko) else ''
         area_ja = f'{kanji}（{reading}）' if (kanji and reading and kanji != reading) else (reading or kanji)
         area_en = area_romaji(area_ko)
@@ -161,8 +185,14 @@ for key, v in E.items():
     road = re.sub(r'\(.*', '', (dc or {}).get('road_addr') or addr_off).strip()
     q = urllib.parse.quote(f"{ko} {road}")
 
+    kk = KAK.get(str(rn)) or {}
+    hp = (kk.get('homepage') or '').strip()
     rows.append({
         'id': rn,
+        'insta': kk.get('instagram') or '',
+        'web': '' if (not hp or 'instagram.com' in hp.lower()) else hp,
+        'tel': kk.get('tel') or '',
+        'station': nearest_station(lat, lng),
         'kind': 'meal' if gj in L.MEAL_GENRES else 'cafe',
         'ko': ko,
         'ja': name_ja,

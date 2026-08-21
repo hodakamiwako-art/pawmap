@@ -380,3 +380,15 @@ body[data-stations="dots"] .stl{display:none}
 .modal .warn{color:#8A5A1E}
 :root[data-theme="dark"] .modal .warn,
 html:not([data-theme="light"]) .modal .warn{color:var(--ochre)}
+
+/* 最寄り駅とInstagramの目印 */
+.stn-tag{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--muted);white-space:nowrap}
+.stn-tag::before{content:"";width:7px;height:7px;border-radius:50%;border:1.5px solid var(--muted);flex:none}
+.ig-tag{font-size:9.5px;font-weight:700;letter-spacing:.06em;padding:1px 4px;border-radius:4px;
+  border:1px solid var(--mine-soft);color:var(--mine)}
+.links a.ig{border-color:var(--mine-soft);color:var(--mine)}
+.links a.ig:hover{background:var(--mine-wash)}
+.links a.ig svg{flex:none;margin-right:2px}
+.links a{gap:8px}
+.dl dd a{color:var(--jade);text-decoration:none}
+.dl dd a:hover{text-decoration:underline}
