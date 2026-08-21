@@ -1,5 +1,5 @@
 /* ソウル犬同伴マップ — Service Worker */
-const VERSION = 'pawmap-v4';
+const VERSION = 'pawmap-v5';
 const SHELL = VERSION + '-shell';
 const TILES = VERSION + '-tiles';
 const TILE_LIMIT = 400;
@@ -26,7 +26,7 @@ const ASSETS = [
 self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(SHELL)
-      .then(c => c.addAll(ASSETS))
+      .then(c => c.addAll(ASSETS.map(u => new Request(u, { cache: 'no-cache' }))))
       .then(() => self.skipWaiting())
   );
 });
@@ -88,11 +88,13 @@ self.addEventListener('fetch', e => {
     return;
   }
 
-  // app shell: network first so updates land, cache as the offline fallback
+  // app shell: network first so updates land, cache as the offline fallback.
+  // `cache: 'no-cache'` forces a revalidation — without it the browser's own
+  // HTTP cache can hand back a stale copy for minutes after a deploy.
   if (url.origin === self.location.origin) {
     e.respondWith((async () => {
       try {
-        const res = await fetch(req);
+        const res = await fetch(req, { cache: 'no-cache' });
         if (res && res.ok) { const c = await caches.open(SHELL); c.put(req, res.clone()); }
         return res;
       } catch (err) {
