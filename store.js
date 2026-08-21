@@ -35,7 +35,9 @@ const Store = {
     if (on) this.favs.add(id); else this.favs.delete(id);
     this.saveLocal();
     if (this.sb && this.user) {
-      if (on) this.sb.from('favourites').upsert({ user_id: this.user.id, place_id: id }).then(noop, noop);
+      if (on) this.sb.from('favourites')
+        .upsert({ user_id: this.user.id, place_id: id }, { onConflict: 'user_id,place_id' })
+        .then(noop, noop);
       else this.sb.from('favourites').delete().match({ user_id: this.user.id, place_id: id }).then(noop, noop);
     }
     this.onchange();
@@ -69,7 +71,7 @@ const Store = {
     this.sb.from('pins').upsert({
       id: p.id, user_id: this.user.id, name: p.name, note: p.note || '',
       lat: p.lat, lng: p.lng, deleted: !!p.deleted, updated_at: p.updated_at,
-    }).then(noop, noop);
+    }, { onConflict: 'id' }).then(noop, noop);
   },
 
   /* ---------- Supabase ---------- */
@@ -124,7 +126,8 @@ const Store = {
     const remote = new Set((rf || []).map(r => r.place_id));
     const localOnly = [...this.favs].filter(id => !remote.has(id));
     if (localOnly.length) {
-      await this.sb.from('favourites').upsert(localOnly.map(id => ({ user_id: uid, place_id: id })));
+      await this.sb.from('favourites')
+        .upsert(localOnly.map(id => ({ user_id: uid, place_id: id })), { onConflict: 'user_id,place_id' });
     }
     remote.forEach(id => this.favs.add(id));
 
