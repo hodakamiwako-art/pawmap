@@ -376,3 +376,7 @@ body[data-stations="dots"] .stl{display:none}
   #account span{max-width:9ch}
   .maphint{font-size:12px;padding:7px 14px}
 }
+
+.modal .warn{color:#8A5A1E}
+:root[data-theme="dark"] .modal .warn,
+html:not([data-theme="light"]) .modal .warn{color:var(--ochre)}

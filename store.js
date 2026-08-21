@@ -11,6 +11,8 @@ const Store = {
   pois: [],            // {id, name, note, lat, lng, updated_at, deleted}
   sb: null,            // supabase client
   user: null,
+  syncState: 'idle',   // idle | ok | pending | error
+  syncDetail: '',
   onchange: () => {},
   onauth: () => {},
 
@@ -108,9 +110,17 @@ const Store = {
   async sync() {
     if (!this.sb || !this.user) return;
     const uid = this.user.id;
+    this.syncState = 'idle';
 
     // お気に入り: 和集合（端末で消したものはサーバーからも消えている）
-    const { data: rf } = await this.sb.from('favourites').select('place_id').eq('user_id', uid);
+    const { data: rf, error: ef } = await this.sb.from('favourites').select('place_id').eq('user_id', uid);
+    if (ef) {
+      // テーブル未作成なら同期だけ止め、端末内の動作は続ける
+      this.syncState = ef.code === 'PGRST205' ? 'pending' : 'error';
+      this.syncDetail = ef.message || '';
+      this.onchange();
+      return;
+    }
     const remote = new Set((rf || []).map(r => r.place_id));
     const localOnly = [...this.favs].filter(id => !remote.has(id));
     if (localOnly.length) {
@@ -119,7 +129,13 @@ const Store = {
     remote.forEach(id => this.favs.add(id));
 
     // ピン: id ごとに新しいほうを採用
-    const { data: rp } = await this.sb.from('pins').select('*').eq('user_id', uid);
+    const { data: rp, error: ep } = await this.sb.from('pins').select('*').eq('user_id', uid);
+    if (ep) {
+      this.syncState = ep.code === 'PGRST205' ? 'pending' : 'error';
+      this.syncDetail = ep.message || '';
+      this.onchange();
+      return;
+    }
     const byId = new Map(this.pois.map(p => [p.id, p]));
     for (const r of rp || []) {
       const mine = byId.get(r.id);
@@ -135,6 +151,7 @@ const Store = {
       if (!r || (p.updated_at || '') > (r.updated_at || '')) this.pushPoi(p);
     }
     void remoteIds;
+    this.syncState = 'ok';
     this.saveLocal();
     this.onchange();
   },

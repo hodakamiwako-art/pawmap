@@ -581,12 +581,19 @@ function renderAccount(user) {
   $('account').classList.toggle('on', !!user);
 }
 
+function syncNote() {
+  if (Store.syncState === 'pending') return `<span class="warn">${t.sync_pending}</span>`;
+  if (Store.syncState === 'error') return `<span class="warn">${t.sync_error}</span>`;
+  if (Store.syncState === 'ok') return `${t.synced}。${t.sync_note}`.replace('。.', '. ');
+  return t.sync_note;
+}
+
 function openAccount() {
   if (Store.user) {
     openModal(`
       <h3>${t.login_title}</h3>
       <p class="lead">${esc(t.signed_as(Store.user.email || ''))}</p>
-      <p class="lead small">${t.sync_note}</p>
+      <p class="lead small">${syncNote()}</p>
       <div class="mrow">
         <button class="ghost" id="mcancel">${t.cancel}</button>
         <button class="primarybtn" id="mout">${t.logout}</button>
