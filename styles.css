@@ -397,3 +397,7 @@ html:not([data-theme="light"]) .modal .warn{color:var(--ochre)}
 .links a{gap:8px}
 .dl dd a{color:var(--jade);text-decoration:none}
 .dl dd a:hover{text-decoration:underline}
+
+.modal .lead.err{color:#B3261E;margin:-8px 0 12px}
+:root[data-theme="dark"] .modal .lead.err,
+html:not([data-theme="light"]) .modal .lead.err{color:#F2B8B5}

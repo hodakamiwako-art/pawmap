@@ -8,7 +8,7 @@ const POI_KEY = 'pawmap.pois.v1';
 
 const Store = {
   favs: new Set(),
-  pois: [],            // {id, name, note, lat, lng, updated_at, deleted}
+  pois: [],            // {id, name, note, url, lat, lng, updated_at, deleted}
   sb: null,            // supabase client
   user: null,
   syncState: 'idle',   // idle | ok | pending | error
@@ -50,7 +50,7 @@ const Store = {
   upsertPoi(poi) {
     const now = new Date().toISOString();
     const i = this.pois.findIndex(p => p.id === poi.id);
-    const rec = Object.assign({ note: '', deleted: false }, poi, { updated_at: now });
+    const rec = Object.assign({ note: '', url: '', deleted: false }, poi, { updated_at: now });
     if (i >= 0) this.pois[i] = Object.assign(this.pois[i], rec); else this.pois.push(rec);
     this.saveLocal();
     this.pushPoi(rec);
@@ -69,9 +69,13 @@ const Store = {
   pushPoi(p) {
     if (!this.sb || !this.user) return;
     this.sb.from('pins').upsert({
-      id: p.id, user_id: this.user.id, name: p.name, note: p.note || '',
+      id: p.id, user_id: this.user.id, name: p.name, note: p.note || '', url: p.url || '',
       lat: p.lat, lng: p.lng, deleted: !!p.deleted, updated_at: p.updated_at,
-    }, { onConflict: 'id' }).then(noop, noop);
+    }, { onConflict: 'id' }).then(({ error }) => {
+      // url 列がまだ無いテーブルでも黙って失敗しないようにする
+      if (error) { this.syncState = error.code === 'PGRST204' ? 'pending' : 'error';
+                   this.syncDetail = error.message || ''; this.onchange(); }
+    }, noop);
   },
 
   /* ---------- Supabase ---------- */
@@ -143,8 +147,8 @@ const Store = {
     for (const r of rp || []) {
       const mine = byId.get(r.id);
       if (!mine || (r.updated_at || '') > (mine.updated_at || '')) {
-        byId.set(r.id, { id: r.id, name: r.name, note: r.note, lat: r.lat, lng: r.lng,
-                         deleted: r.deleted, updated_at: r.updated_at });
+        byId.set(r.id, { id: r.id, name: r.name, note: r.note, url: r.url || '',
+                         lat: r.lat, lng: r.lng, deleted: r.deleted, updated_at: r.updated_at });
       }
     }
     this.pois = [...byId.values()];
@@ -180,6 +184,23 @@ const Store = {
 };
 
 function noop() {}
+
+/* 入力されたURLを http/https に限って正規化する。
+   javascript: や data: をそのままリンクにしないための関門。 */
+function safeUrl(raw) {
+  const v = (raw || '').trim();
+  if (!v) return '';
+  if (/\s/.test(v)) return null;                       // 空白入りはURLではなくメモの誤入力
+  const withScheme = /^[a-z][a-z0-9+.-]*:/i.test(v) ? v : 'https://' + v;
+  try {
+    const u = new URL(withScheme);
+    if (u.protocol !== 'http:' && u.protocol !== 'https:') return null;
+    if (!u.hostname.includes('.') || u.hostname.startsWith('.') || u.hostname.endsWith('.')) return null;
+    return u.href;
+  } catch (e) {
+    return null;
+  }
+}
 
 function uuid() {
   if (crypto.randomUUID) return crypto.randomUUID();

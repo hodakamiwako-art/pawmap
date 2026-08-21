@@ -444,6 +444,7 @@ function poiDetail(p) {
     </div>
     <div class="links">
       <a class="primary" href="https://www.google.com/maps/search/?api=1&query=${p.lat}%2C${p.lng}" target="_blank" rel="noopener">${t.link_g}<span class="arr">↗</span></a>
+      ${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">${t.link_mine_url}<span class="arr">↗</span></a>` : ''}
       <button class="rowbtn" id="editpin">${t.mine_name} / ${t.mine_note}</button>
       <button class="rowbtn danger" id="delpin">${t.del}</button>
     </div>`;
@@ -570,6 +571,9 @@ function openPoiEditor(poi, isNew) {
       <input id="pn" type="text" placeholder="${esc(t.mine_name_ph)}" value="${esc(poi.name || '')}"></label>
     <label class="field"><span>${t.mine_note}</span>
       <textarea id="pt" rows="3" placeholder="${esc(t.mine_note_ph)}">${esc(poi.note || '')}</textarea></label>
+    <label class="field"><span>${t.mine_url}</span>
+      <input id="pu" type="url" inputmode="url" placeholder="${esc(t.mine_url_ph)}" value="${esc(poi.url || '')}"></label>
+    <p class="lead small err" id="perr" hidden></p>
     <div class="mrow">
       <button class="ghost" id="mcancel">${t.cancel}</button>
       <button class="primarybtn" id="msave">${t.save}</button>
@@ -577,8 +581,16 @@ function openPoiEditor(poi, isNew) {
   $('pn').focus();
   $('mcancel').onclick = closeModal;
   $('msave').onclick = () => {
+    const url = safeUrl($('pu').value);
+    if (url === null) {                       // 空文字は許すが、壊れたURLは止める
+      $('perr').textContent = t.mine_url_bad;
+      $('perr').hidden = false;
+      $('pu').focus();
+      return;
+    }
     const rec = Store.upsertPoi({ id: poi.id, name: $('pn').value.trim() || t.mine_title,
-                                  note: $('pt').value.trim(), lat: poi.lat, lng: poi.lng });
+                                  note: $('pt').value.trim(), url,
+                                  lat: poi.lat, lng: poi.lng });
     closeModal();
     select(rec.id, 'poi', isNew);
   };

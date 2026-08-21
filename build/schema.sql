@@ -24,6 +24,7 @@ create table if not exists public.pins (
   user_id    uuid        not null references auth.users(id) on delete cascade,
   name       text        not null default '',
   note       text        not null default '',
+  url        text        not null default '',
   lat        double precision not null,
   lng        double precision not null,
   deleted    boolean     not null default false,
@@ -39,3 +40,6 @@ create policy "own pins" on public.pins
   for all
   using (auth.uid() = user_id)
   with check (auth.uid() = user_id);
+
+-- すでにテーブルを作ってある場合は、この1行だけ追加で実行してください
+alter table public.pins add column if not exists url text not null default '';
