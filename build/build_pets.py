@@ -7,7 +7,7 @@ import lexicon as L
 
 raw = json.load(open('pets_raw.json', encoding='utf-8'))
 # サイトを実際に読んで外国語ページが確認できたものだけ印を付ける（推測はしない）
-LANG = json.load(open('vet_lang.json', encoding='utf-8')) if os.path.exists('vet_lang.json') else {}
+LANG = json.load(open('vet_lang2.json', encoding='utf-8')) if os.path.exists('vet_lang2.json') else {}
 
 # 動物病院まわりの語彙。店名の音写に使う
 EXTRA = {

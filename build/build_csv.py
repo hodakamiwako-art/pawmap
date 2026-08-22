@@ -46,3 +46,21 @@ with open('../downloads/seoul-vets-and-pet-shops.csv', 'w', newline='', encoding
 for n in ['korea-dog-friendly-places.csv', 'seoul-vets-and-pet-shops.csv']:
     print(n, round(os.path.getsize('../downloads/' + n) / 1024), 'KB')
 print('places', len(places), 'pets', len(pets))
+
+
+stays = json.load(open('../data/stays.json', encoding='utf-8'))
+with open('../downloads/korea-dog-friendly-stays.csv', 'w', newline='', encoding='utf-8-sig') as f:
+    w = csv.writer(f)
+    w.writerow(['No', '種別(日)', 'Type (EN)', '名称(日本語読み)', 'Name (English)', '名称(ハングル)',
+                'ペット可の根拠', '広域自治体(日)', 'Region (EN)', '市郡区(日)', 'City/District (EN)',
+                '住所(ハングル)', '電話', 'Instagram', '公式サイト', '緯度', '経度',
+                '評価', '口コミ数', 'Googleマップ', 'カテゴリ原文(韓)'])
+    for i, r in enumerate(stays, 1):
+        gmap = f"https://www.google.com/maps/search/?api=1&query={r['lat']},{r['lng']}"
+        w.writerow([i, r['kind']['ja'], r['kind']['en'], r['ja'], r['en'], r['ko'],
+                    '地図データに明記' if r['pet'] == 'flag' else '店名から判断',
+                    r['sido']['ja'], r['sido']['en'], r['sigungu']['ja'], r['sigungu']['en'],
+                    r['addr'], r['tel'], r['insta'], r['web'], r['lat'], r['lng'],
+                    r['rating'] or '', r['reviews'], gmap, r['cate_ko']])
+print('korea-dog-friendly-stays.csv',
+      round(os.path.getsize('../downloads/korea-dog-friendly-stays.csv') / 1024), 'KB  stays', len(stays))

@@ -26,6 +26,9 @@
   --shop:#6B5AA6;
   --shop-wash:#E7E3F2;
   --shop-soft:#BDB2DC;
+  --stay:#7A6034;
+  --stay-wash:#EFE8DC;
+  --stay-soft:#CFBE9E;
   --shadow:0 1px 2px rgba(22,31,26,.06),0 8px 24px rgba(22,31,26,.07);
   --shadow-lg:0 2px 6px rgba(22,31,26,.10),0 24px 60px rgba(22,31,26,.18);
   --f-disp:"Zen Old Mincho","Hiragino Mincho ProN",serif;
@@ -43,8 +46,11 @@
     --ig:#E495C0; --ig-wash:#2A1A24; --ig-soft:#5C2F47;
   --vet:#6FBBD6; --vet-wash:#132630; --vet-soft:#2C5566;
   --shop:#A99BE0; --shop-wash:#1E1A2E; --shop-soft:#453C6B;
+  --stay:#D3B478; --stay-wash:#241E13; --stay-soft:#544629;
     --vet:#6FBBD6; --vet-wash:#132630; --vet-soft:#2C5566;
     --shop:#A99BE0; --shop-wash:#1E1A2E; --shop-soft:#453C6B;
+  --stay:#D3B478; --stay-wash:#241E13; --stay-soft:#544629;
+    --stay:#D3B478; --stay-wash:#241E13; --stay-soft:#544629;
     --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
     --shadow-lg:0 2px 6px rgba(0,0,0,.5),0 24px 60px rgba(0,0,0,.6);
     color-scheme:dark;
@@ -58,6 +64,7 @@
   --ig:#E495C0; --ig-wash:#2A1A24; --ig-soft:#5C2F47;
   --vet:#6FBBD6; --vet-wash:#132630; --vet-soft:#2C5566;
   --shop:#A99BE0; --shop-wash:#1E1A2E; --shop-soft:#453C6B;
+  --stay:#D3B478; --stay-wash:#241E13; --stay-soft:#544629;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
   --shadow-lg:0 2px 6px rgba(0,0,0,.5),0 24px 60px rgba(0,0,0,.6);
   color-scheme:dark;
@@ -460,3 +467,17 @@ html:not([data-theme="light"]) .modal .lead.err{color:#F2B8B5}
 .phrase.vet .kq.sep{margin-top:11px;padding-top:11px;border-top:1px solid var(--line-soft)}
 .phrase.vet .note{margin:12px 0 0;font-size:11.5px;color:var(--muted);line-height:1.6}
 .badge.lang{background:var(--jade-wash);border-color:var(--jade-soft);color:var(--jade)}
+.chk.l input{accent-color:var(--jade)}
+
+/* ---------- 犬と泊まれる宿 ---------- */
+.chk.h input{accent-color:var(--stay)}
+.mk.stay{background:var(--stay);border-radius:3px 3px 0 0}
+.mkw.stay .mk{position:relative}
+/* 屋根のかたちにして、丸（店）・四角（病院）と見分ける */
+.mkw.stay .mk::before{content:"";position:absolute;left:50%;top:-4px;transform:translateX(-50%);
+  width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;
+  border-bottom:5px solid var(--stay)}
+.card.stay .bullet.h{background:var(--stay);border-radius:3px}
+.tag.h{background:var(--stay-wash);color:var(--stay);font-weight:500}
+.legend .k.h{background:var(--stay);border-radius:3px}
+.badge.stay{background:var(--stay-wash);border-color:var(--stay-soft);color:var(--stay)}

@@ -1,5 +1,5 @@
 /* ソウル犬同伴マップ — Service Worker */
-const VERSION = 'pawmap-v12';
+const VERSION = 'pawmap-v14';
 const SHELL = VERSION + '-shell';
 const TILES = VERSION + '-tiles';
 const TILE_LIMIT = 400;

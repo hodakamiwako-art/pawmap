@@ -12,14 +12,15 @@ let lang = detectLang();
 let t = I18N[lang];
 
 const st = { q:'', kind:'', genre:'', sido:'', sigungu:'', ter:false, favonly:false, mineonly:false,
-             subway:false, vet:false, shop:false, sort:'area', sel:null, selKind:null,
+             vet:false, shop:false, stay:false, onlylang:false, sort:'area', sel:null, selKind:null,
              here:null, placing:false, limit:200 };
 
-let PLACES = [], SUB = null, PETS = null;
-let map, tiles, markers = new Map(), poiMarkers = new Map(), petMarkers = new Map(), subLayer, stationLayer;
+let PLACES = [], SUB = null, PETS = null, STAYS = null;
+let map, tiles, markers = new Map(), poiMarkers = new Map(), petMarkers = new Map(),
+    stayMarkers = new Map(), subLayer, stationLayer;
 let hereMarker, hereRing, fitted = false, ghost = null;
 // 全国だとマーカーが5千個近くになる。DOMに載せるのは画面内だけにする
-let visIds = new Set(), visPetIds = new Set(), visPoiIds = new Set();
+let visIds = new Set(), visPetIds = new Set(), visPoiIds = new Set(), visStayIds = new Set();
 
 /* ---------- 地図の下地（テーマに追従） ---------- */
 const TILE = {
@@ -82,6 +83,7 @@ async function init() {
 
   applyLang();
   render();
+  ensureSubway();
 
   const mapEl = $('map');
   const hasSize = () => mapEl.clientWidth > 0 && mapEl.clientHeight > 0;
@@ -104,9 +106,10 @@ function wire() {
   $('ter').onchange   = e => { st.ter = e.target.checked; st.limit = PAGE; render(); };
   $('favonly').onchange  = e => { st.favonly = e.target.checked; st.limit = PAGE; render(); };
   $('mineonly').onchange = e => { st.mineonly = e.target.checked; st.limit = PAGE; render(); };
-  $('subway').onchange   = e => { st.subway = e.target.checked; toggleSubway(); };
   $('vet').onchange      = e => { st.vet = e.target.checked; ensurePets(); };
   $('shop').onchange     = e => { st.shop = e.target.checked; ensurePets(); };
+  $('onlylang').onchange = e => { st.onlylang = e.target.checked; st.limit = PAGE; ensurePets(); };
+  $('stay').onchange     = e => { st.stay = e.target.checked; st.limit = PAGE; ensureStays(); };
 
   document.querySelectorAll('.seg button').forEach(b => b.onclick = () => {
     st.kind = b.dataset.kind; st.limit = PAGE;
@@ -117,6 +120,7 @@ function wire() {
     Object.assign(st, { q:'', kind:'', genre:'', sido:'', sigungu:'', ter:false, favonly:false, mineonly:false, sort:'area' });
     $('q').value = ''; $('genre').value = ''; $('sido').value = ''; buildSigungu();
     $('sort').value = 'area'; $('ter').checked = $('favonly').checked = $('mineonly').checked = false;
+    st.onlylang = false; $('onlylang').checked = false;
     st.limit = PAGE;
     document.querySelectorAll('.seg button').forEach((o, i) => o.setAttribute('aria-pressed', String(i === 0)));
     render();
@@ -154,6 +158,7 @@ function setLang(l) {
   try { localStorage.setItem(LANG_KEY, l); } catch (e) {}
   applyLang();
   render();
+  ensureSubway();
   if (st.sel) select(st.sel, st.selKind);
 }
 
@@ -178,9 +183,10 @@ function applyLang() {
   document.querySelector('.chk.t span').textContent = t.terrace_only;
   document.querySelector('.chk.f span').textContent = t.fav_only;
   document.querySelector('.chk.m span').textContent = t.show_mine;
-  document.querySelector('.chk.s span').textContent = t.show_subway;
   document.querySelector('.chk.v span').textContent = t.show_vet;
   document.querySelector('.chk.p span').textContent = t.show_shop;
+  document.querySelector('.chk.l span').textContent = t.only_lang;
+  document.querySelector('.chk.h span').textContent = t.show_stay;
   $('t-legend').textContent = t.legend;
   $('t-lcafe').textContent = t.legend_cafe;
   $('t-lmeal').textContent = t.legend_meal;
@@ -188,13 +194,14 @@ function applyLang() {
   $('t-lmine').textContent = t.legend_mine;
   $('t-lvet').textContent = t.legend_vet;
   $('t-lshop').textContent = t.legend_shop;
+  $('t-lstay').textContent = t.legend_stay;
   $('zoomhint').textContent = t.zoom_hint;
   $('locate').title = t.locate;
   $('fitall').title = t.fitall;
   $('addpin').title = t.addpin;
   buildFilters();
   renderAccount(Store.user);
-  if (st.subway) drawSubway();
+  if (SUB) drawSubway();
 }
 
 function buildFilters() {
@@ -335,11 +342,18 @@ function render() {
   } else if (st.sort === 'name') {
     pets.sort((a, b) => (a[lang] || a.ko).localeCompare(b[lang] || b.ko, lang));
   }
-  const total = vis.length + mine.length + pets.length;
+  const stays = (STAYS || []).filter(stayMatch);
+  if (st.sort === 'dist' && st.here) {
+    const dd = p => distance(st.here[0], st.here[1], p.lat, p.lng);
+    stays.sort((a, b) => dd(a) - dd(b));
+  } else if (st.sort === 'name') {
+    stays.sort((a, b) => (a[lang] || a.ko).localeCompare(b[lang] || b.ko, lang));
+  }
+  const total = vis.length + mine.length + pets.length + stays.length;
   $('n').textContent = total;
   $('nmap').textContent = total;
   const active = [st.q, st.kind, st.genre, st.sido, st.sigungu].filter(Boolean).length +
-                 (st.ter ? 1 : 0) + (st.favonly ? 1 : 0) + (st.mineonly ? 1 : 0);
+                 (st.ter ? 1 : 0) + (st.favonly ? 1 : 0) + (st.mineonly ? 1 : 0) + (st.onlylang ? 1 : 0);
   const badge = $('fcount');
   badge.textContent = active;
   badge.hidden = active === 0;
@@ -356,6 +370,7 @@ function render() {
   const rows = [];
   for (const p of mine) rows.push(() => poiCard(p));
   for (const p of pets) rows.push(() => petCard(p));
+  for (const p of stays) rows.push(() => stayCard(p));
   for (const p of vis)  rows.push(() => placeCard(p));
   const shown = Math.min(st.limit, rows.length);
   for (let i = 0; i < shown; i++) list.appendChild(rows[i]());
@@ -373,7 +388,9 @@ function render() {
   visIds = new Set(vis.map(p => p.id));
   visPoiIds = new Set(mine.map(p => p.id));
   visPetIds = new Set(pets.map(p => p.id));
+  visStayIds = new Set(stays.map(p => p.id));
   syncPetMarkers();
+  syncStayMarkers();
   updateMarkersInView();
 }
 
@@ -394,6 +411,7 @@ function updateMarkersInView() {
   sweep(markers, visIds);
   sweep(poiMarkers, visPoiIds);
   sweep(petMarkers, visPetIds);
+  sweep(stayMarkers, visStayIds);
 
   const capped = cand.length > MARKER_CAP;
   const step = capped ? cand.length / MARKER_CAP : 1;
@@ -462,12 +480,14 @@ function select(id, kind, fly) {
   PLACES.forEach(refreshMarker);
   syncPoiMarkers();
   syncPetMarkers();
+  syncStayMarkers();
   document.querySelectorAll('.card.on').forEach(c => c.classList.remove('on'));
   const c = $('card-' + id);
   if (c) { c.classList.add('on'); c.scrollIntoView({ block: 'nearest' }); }
 
   const target = kind === 'poi' ? Store.getPoi(id)
                : kind === 'pet' ? (PETS || []).find(x => x.id === id)
+               : kind === 'stay' ? (STAYS || []).find(x => x.id === id)
                : PLACES.find(x => x.id === id);
   if (!target) return;
   const ll = kind === 'place' ? [target.mlat, target.mlng] : [target.lat, target.lng];
@@ -478,6 +498,7 @@ function select(id, kind, fly) {
 
   $('detail').innerHTML = kind === 'poi' ? poiDetail(target)
                         : kind === 'pet' ? petDetail(target)
+                        : kind === 'stay' ? stayDetail(target)
                         : placeDetail(target);
   bindDetail(target, kind);
   $('detail').classList.add('open');
@@ -544,7 +565,7 @@ function poiDetail(p) {
 
 function bindDetail(target, kind) {
   $('closebtn').onclick = closeDetail;
-  if (kind === 'pet') return;
+  if (kind === 'pet' || kind === 'stay') return;
   if (kind === 'poi') {
     $('editpin').onclick = () => openPoiEditor(target);
     $('delpin').onclick = () => {
@@ -566,6 +587,7 @@ function closeDetail() {
   PLACES.forEach(refreshMarker);
   syncPoiMarkers();
   syncPetMarkers();
+  syncStayMarkers();
   document.querySelectorAll('.card.on').forEach(c => c.classList.remove('on'));
 }
 
@@ -604,15 +626,10 @@ function locate() {
   }, () => { btn.classList.remove('busy'); }, { enableHighAccuracy: true, timeout: 10000, maximumAge: 30000 });
 }
 
-/* ---------- 地下鉄 ---------- */
-async function toggleSubway() {
-  if (!st.subway) {
-    map.removeLayer(subLayer); map.removeLayer(stationLayer);
-    return;
-  }
+/* ---------- 地下鉄（常時表示） ---------- */
+async function ensureSubway() {
   if (!SUB) SUB = await fetch('data/subway.json').then(r => r.json());
   drawSubway();
-  subLayer.addTo(map);
   stationLayer.addTo(map);
   updateStationVisibility();
 }
@@ -638,9 +655,11 @@ function drawSubway() {
 
 function updateStationVisibility() {
   const z = map.getZoom();
-  const el = stationLayer._map ? stationLayer : null;
-  if (!el) return;
   document.body.dataset.stations = z >= 15 ? 'labels' : (z >= 13 ? 'dots' : 'off');
+  // 全国を見渡しているときに路線を描くと、ソウルが色の塊になるだけ
+  const showLines = z >= 11;
+  if (showLines && !map.hasLayer(subLayer)) subLayer.addTo(map);
+  else if (!showLines && map.hasLayer(subLayer)) map.removeLayer(subLayer);
 }
 
 /* ---------- 動物病院・ペットショップ ---------- */
@@ -659,6 +678,8 @@ function petShown(p) {
 
 function petMatch(p) {
   if (!petShown(p)) return false;
+  // 外国語ページが確認できた病院だけに絞る（確認できたのは5軒だけ）
+  if (st.onlylang && p.type === 'vet' && !p.lang) return false;
   if (st.favonly || st.ter || st.mineonly || st.kind || st.genre) return false;
   if (st.sido && p.sido.ko !== st.sido) return false;
   if (st.sigungu && p.sigungu.ko !== st.sigungu) return false;
@@ -742,6 +763,93 @@ function petDetail(p) {
       <div class="kq sep">${t.vet_p3_ko}</div><div class="ja">${t.vet_p3_ja}</div>
       <p class="note">${t.vet_lang_note}</p>
     </div>` : ''}
+    <div class="links">
+      <a class="primary" href="${gmapUrl(p)}" target="_blank" rel="noopener">${t.link_g}<span class="arr">↗</span></a>
+      <a href="${naverUrl(p)}" target="_blank" rel="noopener">${t.link_n}<span class="arr">↗</span></a>
+      ${p.insta ? `<a class="ig" href="${esc(p.insta)}" target="_blank" rel="noopener">${ICON_IG}${t.link_ig}<span class="arr">↗</span></a>` : ''}
+      ${p.web ? `<a href="${esc(p.web)}" target="_blank" rel="noopener">${t.link_web}<span class="arr">↗</span></a>` : ''}
+      ${p.tel ? `<a href="tel:${esc(p.tel.replace(/[^0-9+]/g, ''))}">${t.link_tel}<span class="arr">↗</span></a>` : ''}
+    </div>`;
+}
+
+/* ---------- 犬と泊まれる宿 ---------- */
+async function ensureStays() {
+  if (st.stay && !STAYS) STAYS = await fetch('data/stays.json').then(r => r.json());
+  render();
+}
+
+function stayMatch(p) {
+  if (!st.stay) return false;
+  if (st.favonly || st.ter || st.mineonly || st.kind || st.genre) return false;
+  if (st.sido && p.sido.ko !== st.sido) return false;
+  if (st.sigungu && p.sigungu.ko !== st.sigungu) return false;
+  if (st.q) {
+    const h = (p.ko + p.ja + p.en + p.kind.ja + p.kind.en + p.addr +
+               p.sigungu.ja + p.sigungu.en + p.sigungu.ko).toLowerCase();
+    if (!h.includes(st.q.toLowerCase())) return false;
+  }
+  return true;
+}
+
+function syncStayMarkers() {
+  for (const p of (STAYS || [])) {
+    if (!visStayIds.has(p.id)) continue;
+    let m = stayMarkers.get(p.id);
+    const cls = 'mkw stay' + (st.sel === p.id && st.selKind === 'stay' ? ' on' : '');
+    if (!m) {
+      m = L.marker([p.lat, p.lng], {
+        icon: L.divIcon({ className: cls, html: '<span class="mk stay"></span>',
+                          iconSize: [13, 13], iconAnchor: [6.5, 6.5] }),
+        title: p.ja, riseOnHover: true,
+      });
+      m.on('click', () => select(p.id, 'stay'));
+      stayMarkers.set(p.id, m);
+    } else if (m._icon) {
+      m._icon.className = cls + ' leaflet-marker-icon leaflet-div-icon leaflet-zoom-animated leaflet-interactive';
+    }
+  }
+}
+
+function stayCard(p) {
+  const li = document.createElement('li');
+  const b = document.createElement('button');
+  b.type = 'button';
+  b.className = 'card stay' + (st.sel === p.id && st.selKind === 'stay' ? ' on' : '');
+  b.id = 'card-' + p.id;
+  b.innerHTML = `<span class="bullet h"></span><span class="nm"></span><span class="ko"></span>` +
+    `<span class="meta"><span class="tag h"></span><span class="ar"></span></span>` +
+    `<span class="aside">${st.here ? '<span class="dist"></span>' : ''}</span>`;
+  b.querySelector('.nm').textContent = p[lang] || p.ko;
+  b.querySelector('.ko').textContent = p.ko;
+  b.querySelector('.tag').textContent = p.kind[lang];
+  b.querySelector('.ar').textContent = p.sigungu[lang] || p.sigungu.ko;
+  const d = b.querySelector('.dist');
+  if (d) d.textContent = fmtDist(distance(st.here[0], st.here[1], p.lat, p.lng));
+  b.onclick = () => select(p.id, 'stay', true);
+  li.appendChild(b);
+  return li;
+}
+
+function stayDetail(p) {
+  const dist = st.here ? fmtDist(distance(st.here[0], st.here[1], p.lat, p.lng)) : null;
+  return `<div class="top">
+      <div class="dbtns"><button class="iconbtn" id="closebtn">✕</button></div>
+      <div class="eyebrow">${esc(p.sido[lang])} · ${esc(p.sigungu[lang])}${dist ? ' · ' + esc(t.d_dist(dist)) : ''}</div>
+      <h2>${esc(p[lang] || p.ko)}</h2>
+      <p class="hangul">${esc(p.ko)}</p>
+      <div class="badges">
+        <span class="badge stay">${esc(p.kind[lang])}</span>
+        <span class="badge ${p.pet === 'flag' ? 'in' : 'no'}">${p.pet === 'flag' ? t.stay_evidence_flag : t.stay_evidence_name}</span>
+      </div>
+    </div>
+    <dl class="dl">
+      <dt>${t.d_kind}</dt><dd>${esc(p.kind[lang])}（${esc(p.cate_ko)}）</dd>
+      <dt>${t.d_addr}</dt><dd class="addr">${esc(p.addr)}</dd>
+      ${p.tel ? `<dt>${t.d_tel}</dt><dd><a href="tel:${esc(p.tel.replace(/[^0-9+]/g, ''))}">${esc(p.tel)}</a></dd>` : ''}
+    </dl>
+    <div class="phrase">
+      <p class="note" style="margin:0">${t.d_stay_note}</p>
+    </div>
     <div class="links">
       <a class="primary" href="${gmapUrl(p)}" target="_blank" rel="noopener">${t.link_g}<span class="arr">↗</span></a>
       <a href="${naverUrl(p)}" target="_blank" rel="noopener">${t.link_n}<span class="arr">↗</span></a>
