@@ -11,7 +11,7 @@ const ICON_SUN = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" st
 let lang = detectLang();
 let t = I18N[lang];
 
-const st = { q:'', kind:'', genre:'', sido:'', sigungu:'', ter:false, favonly:false, mineonly:false,
+const st = { q:'', mode:'', kind:'', genre:'', sido:'', sigungu:'', ter:false, favonly:false, mineonly:false,
              vet:false, shop:false, stay:false, onlylang:false, sort:'area', sel:null, selKind:null,
              here:null, placing:false, limit:200 };
 
@@ -106,23 +106,20 @@ function wire() {
   $('ter').onchange   = e => { st.ter = e.target.checked; st.limit = PAGE; render(); };
   $('favonly').onchange  = e => { st.favonly = e.target.checked; st.limit = PAGE; render(); };
   $('mineonly').onchange = e => { st.mineonly = e.target.checked; st.limit = PAGE; render(); };
-  $('vet').onchange      = e => { st.vet = e.target.checked; ensurePets(); };
-  $('shop').onchange     = e => { st.shop = e.target.checked; ensurePets(); };
   $('onlylang').onchange = e => { st.onlylang = e.target.checked; st.limit = PAGE; ensurePets(); };
-  $('stay').onchange     = e => { st.stay = e.target.checked; st.limit = PAGE; ensureStays(); };
 
   document.querySelectorAll('.seg button').forEach(b => b.onclick = () => {
-    st.kind = b.dataset.kind; st.limit = PAGE;
-    document.querySelectorAll('.seg button').forEach(o => o.setAttribute('aria-pressed', String(o === b)));
-    render();
+    setMode(b.dataset.mode);
   });
   $('reset').onclick = () => {
-    Object.assign(st, { q:'', kind:'', genre:'', sido:'', sigungu:'', ter:false, favonly:false, mineonly:false, sort:'area' });
+    Object.assign(st, { q:'', mode:'', kind:'', genre:'', sido:'', sigungu:'', ter:false,
+                        favonly:false, mineonly:false, vet:false, shop:false, stay:false, sort:'area' });
     $('q').value = ''; $('genre').value = ''; $('sido').value = ''; buildSigungu();
     $('sort').value = 'area'; $('ter').checked = $('favonly').checked = $('mineonly').checked = false;
     st.onlylang = false; $('onlylang').checked = false;
     st.limit = PAGE;
     document.querySelectorAll('.seg button').forEach((o, i) => o.setAttribute('aria-pressed', String(i === 0)));
+    buildChips();
     render();
   };
   $('ftoggle').onclick = () => {
@@ -151,6 +148,59 @@ function wire() {
   $('account').onclick = openAccount;
 }
 
+/* ---------- 表示するもの（食事系 / 施設系） ---------- */
+function setMode(mode) {
+  st.mode = mode;
+  st.limit = PAGE;
+  document.querySelectorAll('.seg button').forEach(o =>
+    o.setAttribute('aria-pressed', String((o.dataset.mode || '') === mode)));
+  if (mode === 'facility' && !st.vet && !st.shop && !st.stay) {
+    st.vet = st.shop = st.stay = true;     // 何も出ないと迷うので、まとめて点ける
+  }
+  if (mode === 'food') st.kind = st.kind || '';
+  buildChips();
+  ensurePets();
+  ensureStays();
+}
+
+/* seg の下に出る二段目。モードによって中身が変わる */
+function buildChips() {
+  const box = $('chips');
+  box.innerHTML = '';
+  const group = (label, items) => {
+    const g = document.createElement('div');
+    g.className = 'chipgroup';
+    const l = document.createElement('span');
+    l.className = 'chiplabel';
+    l.textContent = label;
+    g.appendChild(l);
+    for (const it of items) {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'chip ' + it.cls;
+      b.setAttribute('aria-pressed', String(it.on()));
+      b.innerHTML = `<span class="cdot"></span>${esc(it.label)}`;
+      b.onclick = () => { it.toggle(); st.limit = PAGE; buildChips(); ensurePets(); ensureStays(); };
+      g.appendChild(b);
+    }
+    box.appendChild(g);
+  };
+
+  const food = [
+    { label: t.kind_cafe, cls: 'cafe', on: () => st.kind === 'cafe',
+      toggle: () => { st.kind = st.kind === 'cafe' ? '' : 'cafe'; } },
+    { label: t.kind_meal, cls: 'meal', on: () => st.kind === 'meal',
+      toggle: () => { st.kind = st.kind === 'meal' ? '' : 'meal'; } },
+  ];
+  const fac = [
+    { label: t.chip_vet, cls: 'vet', on: () => st.vet, toggle: () => { st.vet = !st.vet; } },
+    { label: t.chip_shop, cls: 'shop', on: () => st.shop, toggle: () => { st.shop = !st.shop; } },
+    { label: t.chip_stay, cls: 'stay', on: () => st.stay, toggle: () => { st.stay = !st.stay; } },
+  ];
+  if (st.mode !== 'facility') group(t.chip_food_label, food);
+  if (st.mode !== 'food') group(t.chip_fac_label, fac);
+}
+
 /* ---------- 言語 ---------- */
 function setLang(l) {
   if (!I18N[l]) return;
@@ -175,18 +225,16 @@ function applyLang() {
   $('q').placeholder = t.search_ph;
   $('t-filters').textContent = t.filters;
   const seg = document.querySelectorAll('.seg button');
-  seg[0].textContent = t.kind_all;
-  seg[1].innerHTML = '<span class="dot"></span>' + t.kind_cafe;
-  seg[2].innerHTML = '<span class="dot"></span>' + t.kind_meal;
+  seg[0].textContent = t.mode_all;
+  seg[1].textContent = t.mode_food;
+  seg[2].textContent = t.mode_facility;
+  buildChips();
   $('reset').textContent = t.reset;
   $('t-unit').textContent = $('t-unit2').textContent = t.count('').trim();
   document.querySelector('.chk.t span').textContent = t.terrace_only;
   document.querySelector('.chk.f span').textContent = t.fav_only;
   document.querySelector('.chk.m span').textContent = t.show_mine;
-  document.querySelector('.chk.v span').textContent = t.show_vet;
-  document.querySelector('.chk.p span').textContent = t.show_shop;
   document.querySelector('.chk.l span').textContent = t.only_lang;
-  document.querySelector('.chk.h span').textContent = t.show_stay;
   $('t-legend').textContent = t.legend;
   $('t-lcafe').textContent = t.legend_cafe;
   $('t-lmeal').textContent = t.legend_meal;
@@ -297,6 +345,7 @@ function syncPoiMarkers() {
 
 /* ---------- 絞り込みと一覧 ---------- */
 function match(p) {
+  if (st.mode === 'facility') return false;
   if (st.mineonly) return false;
   if (st.kind && p.kind !== st.kind) return false;
   if (st.genre && p.genre.ja !== st.genre) return false;
@@ -352,7 +401,7 @@ function render() {
   const total = vis.length + mine.length + pets.length + stays.length;
   $('n').textContent = total;
   $('nmap').textContent = total;
-  const active = [st.q, st.kind, st.genre, st.sido, st.sigungu].filter(Boolean).length +
+  const active = [st.q, st.mode, st.kind, st.genre, st.sido, st.sigungu].filter(Boolean).length +
                  (st.ter ? 1 : 0) + (st.favonly ? 1 : 0) + (st.mineonly ? 1 : 0) + (st.onlylang ? 1 : 0);
   const badge = $('fcount');
   badge.textContent = active;
@@ -677,10 +726,11 @@ function petShown(p) {
 }
 
 function petMatch(p) {
+  if (st.mode === 'food') return false;
   if (!petShown(p)) return false;
   // 外国語ページが確認できた病院だけに絞る（確認できたのは5軒だけ）
   if (st.onlylang && p.type === 'vet' && !p.lang) return false;
-  if (st.favonly || st.ter || st.mineonly || st.kind || st.genre) return false;
+  if (st.favonly || st.ter || st.mineonly || st.genre) return false;
   if (st.sido && p.sido.ko !== st.sido) return false;
   if (st.sigungu && p.sigungu.ko !== st.sigungu) return false;
   if (st.q) {
@@ -779,8 +829,9 @@ async function ensureStays() {
 }
 
 function stayMatch(p) {
+  if (st.mode === 'food') return false;
   if (!st.stay) return false;
-  if (st.favonly || st.ter || st.mineonly || st.kind || st.genre) return false;
+  if (st.favonly || st.ter || st.mineonly || st.genre) return false;
   if (st.sido && p.sido.ko !== st.sido) return false;
   if (st.sigungu && p.sigungu.ko !== st.sigungu) return false;
   if (st.q) {

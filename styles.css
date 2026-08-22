@@ -139,9 +139,7 @@ a{color:var(--jade)}
   font-size:13px;font-weight:500;color:var(--muted);transition:.15s;
 }
 .seg button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
-.seg button .dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px;vertical-align:1px}
-.seg button:nth-child(2) .dot{background:var(--jade)}
-.seg button:nth-child(3) .dot{background:var(--ochre)}
+
 
 .selrow{display:flex;gap:8px}
 .selrow select{
@@ -481,3 +479,26 @@ html:not([data-theme="light"]) .modal .lead.err{color:#F2B8B5}
 .tag.h{background:var(--stay-wash);color:var(--stay);font-weight:500}
 .legend .k.h{background:var(--stay);border-radius:3px}
 .badge.stay{background:var(--stay-wash);border-color:var(--stay-soft);color:var(--stay)}
+
+/* ---------- 二段目のチップ（何を地図に出すか） ---------- */
+.chips{display:flex;flex-direction:column;gap:7px}
+.chipgroup{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.chiplabel{font-size:10.5px;letter-spacing:.1em;color:var(--muted);margin-right:2px;flex:none}
+.chip{
+  display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);
+  background:var(--surface);border-radius:999px;padding:5px 12px;cursor:pointer;
+  font-size:12.5px;color:var(--ink-2);transition:.13s;
+}
+.chip:hover{background:var(--surface-2)}
+.chip .cdot{width:8px;height:8px;border-radius:50%;background:var(--muted);flex:none}
+.chip.cafe .cdot{background:var(--jade)}
+.chip.meal .cdot{background:var(--ochre)}
+.chip.vet  .cdot{background:var(--vet);border-radius:2px}
+.chip.shop .cdot{background:var(--shop)}
+.chip.stay .cdot{background:var(--stay);border-radius:2px 2px 0 0}
+.chip[aria-pressed="true"]{color:var(--ink);font-weight:500;background:var(--surface-2)}
+.chip.cafe[aria-pressed="true"]{border-color:var(--jade-soft);background:var(--jade-wash);color:var(--jade)}
+.chip.meal[aria-pressed="true"]{border-color:var(--ochre-soft);background:var(--ochre-wash);color:var(--ochre)}
+.chip.vet[aria-pressed="true"]{border-color:var(--vet-soft);background:var(--vet-wash);color:var(--vet)}
+.chip.shop[aria-pressed="true"]{border-color:var(--shop-soft);background:var(--shop-wash);color:var(--shop)}
+.chip.stay[aria-pressed="true"]{border-color:var(--stay-soft);background:var(--stay-wash);color:var(--stay)}
