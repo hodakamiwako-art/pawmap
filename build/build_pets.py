@@ -6,6 +6,8 @@ import translit as T
 import lexicon as L
 
 raw = json.load(open('pets_raw.json', encoding='utf-8'))
+# サイトを実際に読んで外国語ページが確認できたものだけ印を付ける（推測はしない）
+LANG = json.load(open('vet_lang.json', encoding='utf-8')) if os.path.exists('vet_lang.json') else {}
 
 # 動物病院まわりの語彙。店名の音写に使う
 EXTRA = {
@@ -102,7 +104,13 @@ for v in raw.values():
         'h24': bool(re.search(r'24\s*시', ko)),
         'rating': v.get('rating') or None,
         'reviews': v.get('reviews') or 0,
+        'lang': None,        # 下で埋める
     })
+
+for r in rows:
+    ev = LANG.get(r['id'])
+    if ev and (ev.get('ja') or ev.get('en')):
+        r['lang'] = {'ja': ev.get('ja'), 'en': ev.get('en')}
 
 rows.sort(key=lambda r: (r['type'] != 'vet', r['sigungu']['ko'], r['ko']))
 json.dump(rows, open('../data/pets.json', 'w'), ensure_ascii=False, separators=(',', ':'))

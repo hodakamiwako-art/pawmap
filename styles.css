@@ -456,3 +456,7 @@ html:not([data-theme="light"]) .modal .lead.err{color:#F2B8B5}
   .zoomhint{left:10px;top:calc(100% + 44px)}
   body[data-view="list"] .zoomhint{display:none}
 }
+
+.phrase.vet .kq.sep{margin-top:11px;padding-top:11px;border-top:1px solid var(--line-soft)}
+.phrase.vet .note{margin:12px 0 0;font-size:11.5px;color:var(--muted);line-height:1.6}
+.badge.lang{background:var(--jade-wash);border-color:var(--jade-soft);color:var(--jade)}

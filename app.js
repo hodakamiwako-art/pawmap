@@ -85,11 +85,11 @@ async function init() {
 
   const mapEl = $('map');
   const hasSize = () => mapEl.clientWidth > 0 && mapEl.clientHeight > 0;
-  if (hasSize()) { fitted = true; fitAll(); }
+  if (hasSize()) { fitted = true; homeView(); }
   new ResizeObserver(() => {
     if (!hasSize()) return;
     map.invalidateSize();
-    if (!fitted) { fitted = true; fitAll(); }
+    if (!fitted) { fitted = true; homeView(); }
   }).observe(mapEl);
 
   wire();
@@ -570,6 +570,12 @@ function closeDetail() {
 }
 
 /* ---------- 地図の操作 ---------- */
+/* 最初に見せる場所。全国を一望されても掴みどころがないのでソウルから始める */
+function homeView() {
+  map.setView(SEOUL, 12);
+  updateMarkersInView();
+}
+
 function fitAll() {
   const pts = PLACES.filter(match).map(p => [p.mlat, p.mlng])
     .concat(Store.livePois().filter(matchPoi).map(p => [p.lat, p.lng]));
@@ -721,6 +727,7 @@ function petDetail(p) {
       <div class="badges">
         <span class="badge ${p.type === 'vet' ? 'vet' : 'shop'}">${esc(p.kind[lang])}</span>
         ${p.h24 ? `<span class="badge h24">${t.vet_24h}</span>` : ''}
+        ${p.lang ? `<span class="badge lang">${t.lang_evidence}</span>` : ''}
       </div>
     </div>
     <dl class="dl">
@@ -728,6 +735,13 @@ function petDetail(p) {
       <dt>${t.d_addr}</dt><dd class="addr">${esc(p.addr)}</dd>
       ${p.tel ? `<dt>${t.d_tel}</dt><dd><a href="tel:${esc(p.tel.replace(/[^0-9+]/g, ''))}">${esc(p.tel)}</a></dd>` : ''}
     </dl>
+    ${p.type === 'vet' ? `<div class="phrase vet">
+      <div class="lab">${t.vet_lang_label}</div>
+      <div class="kq">${t.vet_p1_ko}</div><div class="ja">${t.vet_p1_ja}</div>
+      <div class="kq sep">${t.vet_p2_ko}</div><div class="ja">${t.vet_p2_ja}</div>
+      <div class="kq sep">${t.vet_p3_ko}</div><div class="ja">${t.vet_p3_ja}</div>
+      <p class="note">${t.vet_lang_note}</p>
+    </div>` : ''}
     <div class="links">
       <a class="primary" href="${gmapUrl(p)}" target="_blank" rel="noopener">${t.link_g}<span class="arr">↗</span></a>
       <a href="${naverUrl(p)}" target="_blank" rel="noopener">${t.link_n}<span class="arr">↗</span></a>
