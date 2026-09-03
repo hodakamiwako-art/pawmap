@@ -1,0 +1,108 @@
+[
+  {
+    "id": 9001,
+    "kind": "meal",
+    "ko": "오다리집 명동 1호점",
+    "ja": "オダリジプ 明洞1号店",
+    "en": "Odarijip Myeongdong Branch 1",
+    "genre": {
+      "ja": "韓国料理",
+      "en": "Korean"
+    },
+    "detail": {
+      "ja": "カンジャンケジャン・焼肉",
+      "en": "Soy-marinated crab, Korean BBQ"
+    },
+    "cat_ko": "간장게장, 숯불구이",
+    "area": {
+      "ja": "明洞（ミョンドン）",
+      "en": "Myeongdong",
+      "ko": "명동"
+    },
+    "sigungu": {
+      "ja": "中区",
+      "en": "Jung-gu",
+      "ko": "중구"
+    },
+    "sido": {
+      "ja": "ソウル特別市",
+      "en": "Seoul",
+      "ko": "서울특별시"
+    },
+    "addr": "서울 중구 명동8나길 28 2~3층",
+    "lat": 37.5614314,
+    "lng": 126.9834585,
+    "prec": "shop",
+    "terrace": false,
+    "rating": null,
+    "reviews": 0,
+    "rid": "",
+    "insta": "",
+    "web": "http://www.odarijip.com/",
+    "tel": "02-778-6767",
+    "station": {
+      "ko": "명동",
+      "ja": "ミョンドン（明洞）",
+      "en": "Myeongdong",
+      "m": 264
+    },
+    "src": "manual",
+    "src_note": {
+      "ja": "公式の登録リストにはありません。店のInstagramの投稿にもとづいて手で追加しました。訪問前に電話でご確認ください。",
+      "en": "Not on the official register. Added by hand based on a post on the restaurant’s Instagram. Please call ahead to confirm."
+    }
+  },
+  {
+    "id": 9002,
+    "kind": "meal",
+    "ko": "오다리집 사보이호텔점",
+    "ja": "オダリジプ サボイホテル店",
+    "en": "Odarijip Savoy Hotel Branch",
+    "genre": {
+      "ja": "韓国料理",
+      "en": "Korean"
+    },
+    "detail": {
+      "ja": "カンジャンケジャン・焼肉",
+      "en": "Soy-marinated crab, Korean BBQ"
+    },
+    "cat_ko": "간장게장, 숯불구이",
+    "area": {
+      "ja": "明洞（ミョンドン）",
+      "en": "Myeongdong",
+      "ko": "명동"
+    },
+    "sigungu": {
+      "ja": "中区",
+      "en": "Jung-gu",
+      "ko": "중구"
+    },
+    "sido": {
+      "ja": "ソウル特別市",
+      "en": "Seoul",
+      "ko": "서울특별시"
+    },
+    "addr": "서울 중구 명동8나길 10 사보이호텔 2F, 3F",
+    "lat": 37.5617559,
+    "lng": 126.9842188,
+    "prec": "shop",
+    "terrace": false,
+    "rating": null,
+    "reviews": 0,
+    "rid": "",
+    "insta": "",
+    "web": "http://www.odarijip.com/",
+    "tel": "02-778-6769",
+    "station": {
+      "ko": "명동",
+      "ja": "ミョンドン（明洞）",
+      "en": "Myeongdong",
+      "m": 213
+    },
+    "src": "manual",
+    "src_note": {
+      "ja": "公式の登録リストにはありません。店のInstagramの投稿にもとづいて手で追加しました。訪問前に電話でご確認ください。",
+      "en": "Not on the official register. Added by hand based on a post on the restaurant’s Instagram. Please call ahead to confirm."
+    }
+  }
+]

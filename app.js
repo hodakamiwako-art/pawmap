@@ -22,19 +22,33 @@ let hereMarker, hereRing, fitted = false, ghost = null;
 // 全国だとマーカーが5千個近くになる。DOMに載せるのは画面内だけにする
 let visIds = new Set(), visPetIds = new Set(), visPoiIds = new Set(), visStayIds = new Set();
 
-/* ---------- 地図の下地（テーマに追従） ---------- */
-const TILE = {
-  light: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
-  dark:  'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+/* ---------- 地図の下地（テーマに追従） ----------
+   CARTO は2026年から鍵を要求するようになり、鍵なしのタイルには
+   「API KEY REQUIRED」の透かしが入る。鍵がない間は OpenStreetMap を使う。 */
+const CARTO_KEY = (window.PAWMAP_CONFIG || {}).cartoApiKey || '';
+const BASE = CARTO_KEY ? {
+  light: `https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=${CARTO_KEY}`,
+  dark:  `https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?key=${CARTO_KEY}`,
+  attr: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+  subdomains: 'abcd',
+  maxNativeZoom: 20
+} : {
+  light: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+  dark:  'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+  attr: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  subdomains: 'abc',
+  maxNativeZoom: 19
 };
-const ATTR = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>';
 const darkQ = window.matchMedia('(prefers-color-scheme: dark)');
 const isDark = () => document.documentElement.dataset.theme === 'dark' ||
   (document.documentElement.dataset.theme !== 'light' && darkQ.matches);
 function setBasemap() {
-  const url = isDark() ? TILE.dark : TILE.light;
+  const url = isDark() ? BASE.dark : BASE.light;
   if (tiles) { tiles.setUrl(url); return; }
-  tiles = L.tileLayer(url, { attribution: ATTR, subdomains: 'abcd', maxZoom: 20, minZoom: 6 }).addTo(map);
+  tiles = L.tileLayer(url, {
+    attribution: BASE.attr, subdomains: BASE.subdomains,
+    maxZoom: 20, maxNativeZoom: BASE.maxNativeZoom, minZoom: 6
+  }).addTo(map);
 }
 darkQ.addEventListener('change', setBasemap);
 
@@ -56,7 +70,11 @@ const fmtDist = m => m < 950 ? Math.round(m / 10) * 10 + 'm' : (m / 1000).toFixe
 init();
 
 async function init() {
-  PLACES = await fetch('data/places.json').then(r => r.json());
+  const [official, manual] = await Promise.all([
+    fetch('data/places.json').then(r => r.json()),
+    fetch('data/manual.json').then(r => r.json())
+  ]);
+  PLACES = official.concat(manual);
   nudgeDuplicates(PLACES);
 
   Store.loadLocal();
@@ -578,7 +596,7 @@ function placeDetail(p) {
       <dt>${t.d_addr}</dt><dd class="addr">${esc(p.addr)}${p.prec === 'shop' ? '' : `<br><small>${p.prec === 'area' ? t.approx_area : t.approx}</small>`}</dd>
       ${p.tel ? `<dt>${t.d_tel}</dt><dd><a href="tel:${esc(p.tel.replace(/[^0-9+]/g, ''))}">${esc(p.tel)}</a></dd>` : ''}
       <dt>${t.d_rating}</dt><dd class="stars">${p.rating ? `★ ${p.rating} / 5　${esc(t.d_reviews(p.reviews))}` : '—'}</dd>
-      <dt>${t.d_licence}</dt><dd>${esc(p.induty[lang])}</dd>
+      ${p.induty ? `<dt>${t.d_licence}</dt><dd>${esc(p.induty[lang])}</dd>` : ''}
     </dl>
     <div class="phrase">
       <div class="lab">${t.phrase_label}</div>
@@ -593,7 +611,7 @@ function placeDetail(p) {
       ${p.rid ? `<a href="${dcUrl(p)}" target="_blank" rel="noopener">${t.link_d}<span class="arr">↗</span></a>` : ''}
       ${p.tel ? `<a href="tel:${esc(p.tel.replace(/[^0-9+]/g, ''))}">${t.link_tel}<span class="arr">↗</span></a>` : ''}
     </div>
-    <div class="foot">${t.foot}</div>`;
+    <div class="foot">${p.src_note ? esc(p.src_note[lang]) : t.foot}</div>`;
 }
 
 function poiDetail(p) {

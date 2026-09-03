@@ -1,5 +1,5 @@
 /* ソウル犬同伴マップ — Service Worker */
-const VERSION = 'pawmap-v15';
+const VERSION = 'pawmap-v17';
 const SHELL = VERSION + '-shell';
 const TILES = VERSION + '-tiles';
 const TILE_LIMIT = 400;
@@ -13,6 +13,7 @@ const ASSETS = [
   'i18n.js',
   'store.js',
   'data/places.json',
+  'data/manual.json',
   'data/subway.json',
   'vendor/leaflet.js',
   'vendor/leaflet.css',
@@ -55,7 +56,7 @@ self.addEventListener('fetch', e => {
   const url = new URL(req.url);
 
   // map tiles: serve from cache when possible, refill in the background
-  if (url.hostname.endsWith('basemaps.cartocdn.com')) {
+  if (url.hostname.endsWith('basemaps.cartocdn.com') || url.hostname === 'tile.openstreetmap.org') {
     e.respondWith((async () => {
       const c = await caches.open(TILES);
       const hit = await c.match(req);
